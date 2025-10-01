@@ -53,7 +53,7 @@ public class SaveAsAction extends RestrictedAction {
 	public SaveAsAction(Environment environment) {
 		super("Save As...", null);
 		putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_S,
-				MAIN_MENU_MASK + InputEvent.SHIFT_MASK));
+				MAIN_MENU_MASK + InputEvent.SHIFT_DOWN_MASK));
 		this.environment = environment;
 		this.fileChooser = Universe.CHOOSER;
 	}

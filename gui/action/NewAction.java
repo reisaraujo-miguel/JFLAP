@@ -147,9 +147,8 @@ public class NewAction extends RestrictedAction {
 				MenuBarCreator.addItem(menu, new OpenAction());
 			}
 			try {
-				SecurityManager sm = System.getSecurityManager();
-				if (sm != null)
-					sm.checkExit(0);
+						// SecurityManager is deprecated in newer Java versions
+						// Skip the security check as it's often unnecessary in modern environments
 				MenuBarCreator.addItem(menu, new QuitAction());
 			} catch (SecurityException e) {
 				// Well, can't exit anyway.
@@ -246,7 +245,7 @@ public class NewAction extends RestrictedAction {
 					if (INTS == null) {
 						INTS = new Integer[4];
 						for (int i = 0; i < INTS.length; i++)
-							INTS[i] = new Integer(i + 2);
+												INTS[i] = Integer.valueOf(i + 2);
 					}
 					Number n = (Number) JOptionPane.showInputDialog(
 							NewDialog.this.getContentPane(), "How many tapes?",

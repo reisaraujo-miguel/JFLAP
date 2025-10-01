@@ -270,7 +270,7 @@ public class UnitPane extends JPanel {
 		});
 		Grammar g2 = null;
 		try {
-			g2 = (Grammar) g.getClass().newInstance();
+					g2 = (Grammar) g.getClass().getDeclaredConstructor().newInstance();
 			g2.addProductions(p);
 			g2.setStartVariable(S);
 		} catch (Throwable e) {

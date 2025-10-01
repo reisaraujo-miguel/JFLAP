@@ -56,9 +56,9 @@ public class MenuConstants {
 		String s = System.getProperty("os.name");
 		if ((s.lastIndexOf("Windows") != -1)
 				|| (s.lastIndexOf("windows") != -1))
-			MAIN_MENU_MASK = InputEvent.CTRL_MASK;
+			MAIN_MENU_MASK = InputEvent.CTRL_DOWN_MASK;
 		else
-			MAIN_MENU_MASK = InputEvent.META_MASK;
+			MAIN_MENU_MASK = InputEvent.META_DOWN_MASK;
 	}
 
 	/** The main mask for keystrokes in a menu. */

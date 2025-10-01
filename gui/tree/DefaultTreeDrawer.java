@@ -97,7 +97,7 @@ public class DefaultTreeDrawer implements TreeDrawer, TreeModelListener {
 	private Point2D scalePoint(Point2D point, Dimension2D size) {
 		Point2D scale = null;
 		try {
-			scale = (Point2D) point.getClass().newInstance();
+			scale = (Point2D) point.getClass().getDeclaredConstructor().newInstance();
 			if (inverted)
 				scale.setLocation(point.getX() * size.getWidth(), (1.0 - point
 						.getY())

@@ -258,7 +258,7 @@ public class UselessPane extends JPanel {
 			return null;
 		Grammar g2 = null;
 		try {
-			g2 = (Grammar) g.getClass().newInstance();
+					g2 = (Grammar) g.getClass().getDeclaredConstructor().newInstance();
 			g2.addProductions(p);
 			g2.setStartVariable(grammar.getStartVariable());
 		} catch (Throwable e) {

@@ -132,7 +132,7 @@ public class GrammarTable extends HighlightTable {
 	public Grammar getGrammar(Class<?> grammarClass) {
 		Grammar grammar = null;
 		try {
-			grammar = (Grammar) grammarClass.newInstance();
+			grammar = (Grammar) grammarClass.getDeclaredConstructor().newInstance();
 		} catch (NullPointerException e) {
             EDebug.print("Throwing a Null Pointer Back at YOU.");
 			throw e;

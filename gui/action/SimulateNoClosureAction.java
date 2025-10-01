@@ -58,7 +58,7 @@ public class SimulateNoClosureAction extends SimulateAction {
 		super(automaton, environment);
 		putValue(NAME, "Step by State...");
 		putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_R,
-				MAIN_MENU_MASK + InputEvent.SHIFT_MASK));
+				MAIN_MENU_MASK + InputEvent.SHIFT_DOWN_MASK));
 	}
 
 	/**

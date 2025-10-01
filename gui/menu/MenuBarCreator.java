@@ -157,7 +157,8 @@ public class MenuBarCreator {
 		Environment environment = frame.getEnvironment();
 		JMenu menu = new JMenu("File");
 		addItem(menu, new NewAction());
-		SecurityManager sm = System.getSecurityManager();
+		// SecurityManager is deprecated in newer Java versions
+		// Skip the security check as it's often unnecessary in modern environments
 		if (Universe.CHOOSER != null) {
 			// Can't open and save files.
 			addItem(menu, new OpenAction());
@@ -199,15 +200,15 @@ public class MenuBarCreator {
 		addItem(menu, new CloseAction(environment));
 		addItem(menu, new CloseWindowAction(frame));
 		try {
-			if (sm != null)
-				sm.checkPrintJobAccess();
+			// SecurityManager is deprecated in newer Java versions
+			// Skip the security check as it's often unnecessary in modern environments
 			addItem(menu, new PrintAction(environment));
 		} catch (SecurityException e) {
 			// Damn. Can't print!
 		}
 		try {
-			if (sm != null)
-				sm.checkExit(0);
+			// SecurityManager is deprecated in newer Java versions
+			// Skip the security check as it's often unnecessary in modern environments
 			addItem(menu, new QuitAction());
 		} catch (SecurityException e) {
 			// Well, can't exit anyway.

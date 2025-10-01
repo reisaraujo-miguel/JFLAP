@@ -187,7 +187,7 @@ public class Universe {
 	static {
 		try {
 			CHOOSER = new JFileChooser(System.getProperties().getProperty("user.dir"));
-		} catch (java.security.AccessControlException e) {
+		} catch (SecurityException e) {
 			// Nothing to do.
 		}
 		// Create the codec registry.
