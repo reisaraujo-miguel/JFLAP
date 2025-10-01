@@ -1,6 +1,6 @@
 SOURCEDIRS = automata file grammar gui regular pumping debug
 APACHE = org
-AUX = DOCS ICON MEDIA Makefile mainFile README LICENSE ChangeLog.txt JFLAP.class
+AUX = DOCS ICON MEDIA Makefile mainFile README LICENSE ChangeLog.txt
 
 all: source-included ws two-jar
 	rm build
@@ -23,8 +23,7 @@ two-jar: build
 	jar cf svg.jar org
 
 build:
-	find . -name "*.java" | xargs javac 
-#	find $(SOURCEDIRS) -name "*.java" | xargs javac 
+	find $(SOURCEDIRS) -name "*.java" | xargs javac -cp "lib/batik-1.17/lib/*" --release 21 -Xlint:deprecation -Xlint:unchecked
 	touch build
 
 ################################################################################
