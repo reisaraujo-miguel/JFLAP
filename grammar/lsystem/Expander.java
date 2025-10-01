@@ -300,5 +300,6 @@ public class Expander {
 	private Context[] contexts = null;
 
 	/** An empty list. */
+	@SuppressWarnings("unchecked")
 	protected static final List<String>[] EMPTY_ARRAY = new List[0];
 }

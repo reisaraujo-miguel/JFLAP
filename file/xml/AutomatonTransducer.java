@@ -99,6 +99,7 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
 		// Map state IDs to states, in an attempt to add in numeric
 		// things first. A specialized Comparator is helpful here.
 		Map<Integer, Node> i2sn = new java.util.TreeMap<Integer, Node>(new Comparator<Object>() {
+			@SuppressWarnings("unchecked")
 			public int compare(Object o1, Object o2) {
 				if (o1 instanceof Integer && !(o2 instanceof Integer))
 					return -1;
@@ -107,7 +108,7 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
 							- ((Integer) o2).intValue();
 				if (o2 instanceof Integer)
 					return 1;
-				return ((Comparable) o1).compareTo(o2);
+				return ((Comparable<Object>) o1).compareTo(o2);
 			}
 		});
 		createState(stateNodes, i2sn, automaton, locatedStates, i2s, false,
@@ -237,7 +238,7 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
 							- ((Integer) o2).intValue();
 				if (o2 instanceof Integer)
 					return 1;
-				return ((Comparable) o1).compareTo(o2);
+				return ((Comparable<Object>) o1).compareTo(o2);
 			}
 		});
 		createState(blockNodes, i2sn, automaton, locatedStates, i2s, true,

@@ -21,6 +21,7 @@
 package automata.pda;
 
 import automata.Automaton;
+import automata.Transition;
 
 /**
  * This subclass of <CODE>Automaton</CODE> is specifically for a definition of
@@ -54,6 +55,7 @@ public class PushdownAutomaton extends Automaton {
 	 * 
 	 * @return the <CODE>Class</CODE> object for <CODE>automata.pda.PDATransition</CODE>
 	 */
+	@SuppressWarnings("unchecked")
 	protected Class getTransitionClass() {
 		return automata.pda.PDATransition.class;
 	}

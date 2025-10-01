@@ -25,6 +25,7 @@ import gui.environment.Universe;
 import java.util.*;
 
 import automata.State;
+import automata.Transition;
 
 /**
  * A <code>MooreMachine</code> is a special subclass of a
@@ -67,6 +68,7 @@ public class MooreMachine extends MealyMachine
      * @return the <code>Class</code> object for the <code>
      * MooreTransition</code>
      */
+    @SuppressWarnings("unchecked")
     protected Class getTransitionClass()
     {
         return MooreTransition.class;

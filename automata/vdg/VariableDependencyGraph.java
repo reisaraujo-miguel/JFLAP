@@ -21,6 +21,7 @@
 package automata.vdg;
 
 import automata.Automaton;
+import automata.Transition;
 
 /**
  * This subclass of <CODE>Automaton</CODE> is specifically for a variable
@@ -49,6 +50,7 @@ public class VariableDependencyGraph extends Automaton {
 	 * 
 	 * @return the <CODE>Class</CODE> object for <CODE>automata.vdg.VDGTransition</CODE>
 	 */
+	@SuppressWarnings("unchecked")
 	protected Class getTransitionClass() {
 		return automata.vdg.VDGTransition.class;
 	}

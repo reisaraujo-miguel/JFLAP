@@ -113,6 +113,7 @@ public class LSystem implements Serializable {
 		}
 		Iterator<Entry<String, ArrayList<List<String>>>> it = reps.entrySet().iterator();
 		symbolToReplacements = new TreeMap<>();
+		@SuppressWarnings("unchecked")
 		List<String>[] emptyListArray = new List[0];
 		while (it.hasNext()) {
 			Map.Entry<String, ArrayList<List<String>>> entry = (Entry<String, ArrayList<List<String>>>) it.next();
@@ -187,5 +188,6 @@ public class LSystem implements Serializable {
 	private boolean nondeterministic = false;
 
 	/** An empty list array. */
+	@SuppressWarnings("unchecked")
 	private static final List<String>[] EMPTY_LIST = new List[0];
 }

@@ -48,6 +48,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 	 * @param grammar
 	 *            the grammar to create the table for
 	 */
+	@SuppressWarnings("unchecked")
 	public LLParseTable(Grammar grammar) {
 		variables = grammar.getVariables();
 		Arrays.sort(variables);
@@ -66,6 +67,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 	 * @param table
 	 *            the table to copy
 	 */
+	@SuppressWarnings("unchecked")
 	public LLParseTable(LLParseTable table) {
 		variables = table.variables;
 		terminals = table.terminals;

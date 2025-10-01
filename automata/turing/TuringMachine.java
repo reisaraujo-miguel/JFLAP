@@ -79,6 +79,7 @@ public class TuringMachine extends Automaton {
 	 * 
 	 * @return the <CODE>Class</CODE> object for <CODE>automata.tm.TMTransition</CODE>
 	 */
+	@SuppressWarnings("unchecked")
 	protected Class getTransitionClass() {
 		return automata.turing.TMTransition.class;
 	}

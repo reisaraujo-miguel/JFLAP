@@ -21,6 +21,7 @@
 package automata.mealy;
 
 import automata.Automaton;
+import automata.Transition;
 
 /**
  * This subclass of <code>Automaton</code> is specifically for
@@ -52,6 +53,7 @@ public class MealyMachine extends Automaton
      * @return the <code>Class</code> object for the <code>
      * MealyTransition</code>
      */
+    @SuppressWarnings("unchecked")
     protected Class getTransitionClass()
     {
         return MealyTransition.class;

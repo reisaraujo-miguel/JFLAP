@@ -21,6 +21,7 @@
 package automata.fsa;
 
 import automata.Automaton;
+import automata.Transition;
 
 
 /**
@@ -49,6 +50,7 @@ public class FiniteStateAutomaton extends Automaton {
 	 * 
 	 * @return the <CODE>Class</CODE> object for <CODE>automata.fsa.FSATransition</CODE>
 	 */
+	@SuppressWarnings("unchecked")
 	protected Class getTransitionClass() {
 		return automata.fsa.FSATransition.class;
 	}

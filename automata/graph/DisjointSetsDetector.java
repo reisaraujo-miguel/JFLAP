@@ -208,6 +208,7 @@ public class DisjointSetsDetector {
 	 *            the automaton
 	 * @return an array of all the disjoint sets of states in <CODE>automaton</CODE>.
 	 */
+	@SuppressWarnings("unchecked")
 	public HashSet<State>[] getDisjointSets(Automaton automaton) {
 		ArrayList<HashSet<State>> list = new ArrayList<HashSet<State>>();
 		STATES_IN_A_SET = new ArrayList<>();
