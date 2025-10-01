@@ -61,7 +61,7 @@ public class GrammarViewer extends JTable {
 		for (int i = 0; i < prods.length; i++) {
 			data[i][0] = prods[i];
 			data[i][1] = Boolean.FALSE;
-			productionToRow.put(prods[i], new Integer(i));
+			productionToRow.put(prods[i], Integer.valueOf(i));
 		}
 		DefaultTableModel model = (DefaultTableModel) getModel();
 		model.setDataVector(data, columnNames);

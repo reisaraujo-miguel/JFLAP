@@ -199,7 +199,7 @@ public class FirstFollowModel extends AbstractTableModel {
 		Set<Character> characters = new HashSet<>();
 		StringBuffer sb = new StringBuffer();
 		for (int i = 0; i < s.length(); i++) {
-			Character c = new Character(s.charAt(i));
+			Character c = Character.valueOf(s.charAt(i));
 			if (characters.add(c))
 				sb.append(c.charValue());
 		}

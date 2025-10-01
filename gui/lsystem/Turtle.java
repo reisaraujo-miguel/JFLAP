@@ -206,7 +206,7 @@ class Turtle implements Cloneable, Serializable {
 	 */
 	public final void setAngleChange(double change) {
 		angleChange = Math.IEEEremainder(change, 360.0);
-		parametersToNumbers.put("angle", new Double(change));
+		parametersToNumbers.put("angle", Double.valueOf(change));
 	}
 
 	// METHODS RELATING TO POSITION
@@ -219,7 +219,7 @@ class Turtle implements Cloneable, Serializable {
 	 */
 	public final void setDistance(double distance) {
 		this.distance = distance;
-		parametersToNumbers.put("distance", new Double(distance));
+		parametersToNumbers.put("distance", Double.valueOf(distance));
 	}
 
 	/**
@@ -372,7 +372,7 @@ class Turtle implements Cloneable, Serializable {
 	 */
 	public void setHueChange(double change) {
 		hueChange = Math.IEEEremainder(change, 360.0);
-		parametersToNumbers.put("hueChange", new Double(change));
+		parametersToNumbers.put("hueChange", Double.valueOf(change));
 	}
 
 	/**
@@ -430,7 +430,7 @@ class Turtle implements Cloneable, Serializable {
 	 */
 	public final void setLineIncrement(double increment) {
 		incrementWidth = increment;
-		parametersToNumbers.put("lineIncrement", new Double(increment));
+		parametersToNumbers.put("lineIncrement", Double.valueOf(increment));
 	}
 
 	/**
@@ -465,7 +465,7 @@ class Turtle implements Cloneable, Serializable {
 	 */
 	public final void setLineWidth(double width) {
 		lineWidth = width;
-		parametersToNumbers.put("lineWidth", new Double(width));
+		parametersToNumbers.put("lineWidth", Double.valueOf(width));
 		stroke = null;
 	}
 
@@ -538,9 +538,9 @@ class Turtle implements Cloneable, Serializable {
 		StreamTokenizer st = new StreamTokenizer(reader);
 		st.ordinaryChar('/');
 		ArrayList<Object> list = new ArrayList<>();
-		Number zero = new Integer(0);
+		Number zero = Integer.valueOf(0);
 		boolean number = false;
-		Character plus = new Character('+');
+		Character plus = Character.valueOf('+');
 
 		try {
 			while (st.nextToken() != StreamTokenizer.TT_EOF) {
@@ -557,19 +557,19 @@ class Turtle implements Cloneable, Serializable {
 					if (number)
 						list.add(plus);
 					number = true;
-					list.add(new Double(st.nval));
+									list.add(Double.valueOf(st.nval));
 					break;
 				case StreamTokenizer.TT_EOL:
 					// Who cares?
 					break;
 				default:
 					number = false;
-					list.add(new Character((char) st.ttype));
+									list.add(Character.valueOf((char) st.ttype));
 					break;
 				}
 			}
 		} catch (IOException e) {
-			return new Double(Double.NaN); // We canna do it, captain!
+					return Double.valueOf(Double.NaN); // We canna do it, captain!
 		}
 		// So now we have all these symbols in a list... great!
 		Iterator<Object> it = list.iterator();
@@ -585,7 +585,7 @@ class Turtle implements Cloneable, Serializable {
 	private static Number valueOf(Iterator<Object> it) {
 		Stack<Object> values = new Stack<>();
 		Stack<Character> operators = new Stack<>();
-		values.push(new Double(0.0));
+		values.push(Double.valueOf(0.0));
 
 		while (it.hasNext()) {
 			Object o = it.next();
@@ -646,7 +646,7 @@ class Turtle implements Cloneable, Serializable {
 				default:
 				// Eh.
 				}
-				values.push(new Double(a));
+						values.push(Double.valueOf(a));
 			}
 			operators.push(character);
 			continue;
@@ -678,7 +678,7 @@ class Turtle implements Cloneable, Serializable {
 			default:
 			// Eh.
 			}
-			values.push(new Double(a));
+			values.push(Double.valueOf(a));
 		}
 		return (Number) values.pop();
 	}

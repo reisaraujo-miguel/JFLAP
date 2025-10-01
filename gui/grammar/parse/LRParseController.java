@@ -356,7 +356,7 @@ class LRParseController {
 		private static final long serialVersionUID = 1L;
 
 		int push(int item) {
-			push(new Integer(item));
+			push(Integer.valueOf(item));
 			return item;
 		}
 

@@ -221,7 +221,7 @@ public class UnrestrictedTreePanel extends TreePanel {
 			for (int j = 0; j < c.length; j++) {
 				cSum += c[j].weight;
 			}
-			Double TOTAL = new Double(total + Math.max(sSum, cSum) / 2.0);
+					Double TOTAL = Double.valueOf(total + Math.max(sSum, cSum) / 2.0);
 			for (int j = 0; j < c.length; j++) {
 				nodeToParentWeights.put(c[j], TOTAL);
 			}

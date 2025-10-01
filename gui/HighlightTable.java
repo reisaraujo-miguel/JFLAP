@@ -85,7 +85,7 @@ public class HighlightTable extends JTable {
 	 *            the column index of the cell to dehighlight
 	 */
 	public void dehighlight(int row, int column) {
-		highlightRenderers.remove(new Integer(singleIndex(row, column)));
+		highlightRenderers.remove(Integer.valueOf(singleIndex(row, column)));
 		repaint();
 	}
 
@@ -127,7 +127,7 @@ public class HighlightTable extends JTable {
 			TableHighlighterRendererGenerator generator) {
 		if (highlightRenderers == null)
 			highlightRenderers = new HashMap<>();
-		Integer in = new Integer(singleIndex(row, column));
+		Integer in = Integer.valueOf(singleIndex(row, column));
 		highlightRenderers.put(in, generator.getRenderer(row, column));
 		repaint();
 	}
@@ -147,7 +147,7 @@ public class HighlightTable extends JTable {
 		int column2 = convertColumnIndexToModel(column);
 		if (highlightRenderers != null) {
 			TableCellRenderer ren = (TableCellRenderer) highlightRenderers
-					.get(new Integer(singleIndex(row, column2)));
+									.get(Integer.valueOf(singleIndex(row, column2)));
 			if (ren != null)
 				return ren;
 		}
