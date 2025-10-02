@@ -1,6 +1,6 @@
 # JFLAP NG - Community-Maintained Fork
 
-[![CI/CD Pipeline](https://github.com/reisaraujo-miguel/jflap-ng/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/your-username/jflap-ng/actions/workflows/ci-cd.yml)
+[![CI/CD Pipeline](https://github.com/reisaraujo-miguel/jflap-ng/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/reisaraujo-miguel/jflap-ng/actions/workflows/ci-cd.yml)
 [![License](https://img.shields.io/badge/License-JFLAP-blue.svg)](LICENSE)
 [![Java](https://img.shields.io/badge/Java-21-orange.svg)](https://openjdk.org/projects/jdk/21/)
 [![Gradle](https://img.shields.io/badge/Gradle-9.1.0-green.svg)](https://gradle.org/)
@@ -68,7 +68,7 @@
 ## Project Structure
 
 ```
-jflap/
+jflap-ng/
 ├── automata/          # Core automata classes and implementations
 ├── grammar/           # Grammar-related classes and converters
 ├── gui/               # Graphical user interface components

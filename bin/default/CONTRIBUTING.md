@@ -31,13 +31,13 @@ Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md) to help us main
 1. **Fork the repository** on GitHub
 2. **Clone your fork** locally:
    ```bash
-   git clone https://github.com/your-username/jflap.git
+   git clone https://github.com/your-username/jflap-ng.git
    cd jflap
    ```
 
 3. **Add the upstream repository** (optional but recommended):
    ```bash
-   git remote add upstream https://github.com/reisaraujo-miguel/jflap.git
+   git remote add upstream https://github.com/reisaraujo-miguel/jflap-ng.git
    ```
 
 4. **Build the project** to ensure everything works:

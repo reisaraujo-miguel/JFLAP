@@ -1,6 +1,6 @@
 # JFLAP NG - Community-Maintained Fork
 
-[![CI/CD Pipeline](https://github.com/your-username/jflap-ng/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/your-username/jflap-ng/actions/workflows/ci-cd.yml)
+[![CI/CD Pipeline](https://github.com/reisaraujo-miguel/jflap-ng/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/reisaraujo-miguel/jflap-ng/actions/workflows/ci-cd.yml)
 [![License](https://img.shields.io/badge/License-JFLAP-blue.svg)](LICENSE)
 [![Java](https://img.shields.io/badge/Java-21-orange.svg)](https://openjdk.org/projects/jdk/21/)
 [![Gradle](https://img.shields.io/badge/Gradle-9.1.0-green.svg)](https://gradle.org/)
@@ -68,7 +68,7 @@
 ## Project Structure
 
 ```
-jflap/
+jflap-ng/
 ├── automata/          # Core automata classes and implementations
 ├── grammar/           # Grammar-related classes and converters
 ├── gui/               # Graphical user interface components
@@ -103,7 +103,7 @@ jflap/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/jflap-ng.git
+   git clone https://github.com/reisaraujo-miguel/jflap-ng.git
    cd jflap
    ```
 
@@ -132,7 +132,7 @@ jflap/
 
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on how to get involved.
 
-- Report bugs and request features via [GitHub Issues](https://github.com/your-username/jflap-ng/issues)
+- Report bugs and request features via [GitHub Issues](https://github.com/reisaraujo-miguel/jflap-ng/issues)
 - Submit pull requests for bug fixes and new features
 - Join the discussion on improving JFLAP
 
@@ -145,7 +145,7 @@ JFLAP is distributed under the JFLAP License. See the [LICENSE](LICENSE) file fo
 ## Support
 
 - **Documentation**: Check the `DOCS/` directory for user guides and tutorials
-- **Issues**: Report problems via [GitHub Issues](https://github.com/your-username/jflap/issues)
+- **Issues**: Report problems via [GitHub Issues](https://github.com/reisaraujo-miguel/jflap-ng/issues)
 - **Email**: jflap@cs.duke.edu (original development team)
 
 ## Acknowledgments
