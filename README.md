@@ -2,7 +2,7 @@
 
 [![CI/CD Pipeline](https://github.com/reisaraujo-miguel/jflap-ng/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/reisaraujo-miguel/jflap-ng/actions/workflows/ci-cd.yml)
 [![License](https://img.shields.io/badge/License-JFLAP-blue.svg)](LICENSE)
-[![Java](https://img.shields.io/badge/Java-21-orange.svg)](https://openjdk.org/projects/jdk/21/)
+[![Java](https://img.shields.io/badge/Java-25-orange.svg)](https://openjdk.org/projects/jdk/25/)
 [![Gradle](https://img.shields.io/badge/Gradle-9.1.0-green.svg)](https://gradle.org/)
 [![Community Fork](https://img.shields.io/badge/Community-Fork-yellow.svg)](CONTRIBUTORS.md)
 
@@ -13,7 +13,7 @@
 ## Key Differences from Original JFLAP
 
 - **Modern Build System**: Gradle-based build instead of legacy build system
-- **Java 21 Compatibility**: Updated for modern Java versions
+- **Java 25 Compatibility**: Updated for modern Java versions with full Java 25 support
 - **CI/CD Pipeline**: Automated testing and releases via GitHub Actions
 - **Updated Dependencies**: Modern Batik SVG libraries and testing frameworks
 - **Community Development**: Open to community contributions and improvements
@@ -32,7 +32,7 @@
 
 ### Prerequisites
 
-- **Java 21** or later
+- **Java 25** or later
 - **Gradle** (included via wrapper)
 
 ### Running JFLAP
@@ -61,7 +61,7 @@
 ### System Requirements
 
 - **Operating System**: Windows, macOS, Linux
-- **Java**: Version 21 or later
+- **Java**: Version 25 or later
 - **Memory**: Minimum 512MB RAM recommended
 - **Display**: 1024x768 resolution or higher
 
@@ -95,7 +95,7 @@ jflap-ng/
 
 ### Build System
 - **Gradle 9.1.0**: Modern build automation
-- **Java 21**: Source and target compatibility
+- **Java 25**: Source and target compatibility
 
 ## Development
 
@@ -122,11 +122,11 @@ jflap-ng/
 #### IntelliJ IDEA
 1. Open the project directory
 2. Import as Gradle project
-3. Ensure JDK 21 is configured
+3. Ensure JDK 25 is configured
 
 #### Eclipse
 1. Import as Gradle project
-2. Configure Java 21 as the execution environment
+2. Configure Java 25 as the execution environment
 
 ## Contributing
 
@@ -158,7 +158,7 @@ If you're migrating from the original JFLAP to this community-maintained version
 
 ### For Users
 - **File Compatibility**: All JFLAP file formats (.jff, .jflap) are fully compatible
-- **Java Requirement**: Requires Java 21 or later (original may work with older Java)
+- **Java Requirement**: Requires Java 25 or later (original may work with older Java)
 - **Flatpak**: A new Flatpak package will be available as `jflap-ng`
 
 ### For Developers
@@ -170,7 +170,8 @@ If you're migrating from the original JFLAP to this community-maintained version
 ## Version History
 
 ### JFLAP NG (Community Fork)
-- **8.0** (Current): Modernized build system, Java 21 support, CI/CD pipeline
+- **8.0-beta2** (Current): Java 25 support, modernized codebase, enhanced for-loops, lambda expressions
+- **8.0-beta1**: Modernized build system, Java 21 support, CI/CD pipeline
 
 ### Original JFLAP (Duke University)
 - **7.1**: Previous stable release with legacy build system
