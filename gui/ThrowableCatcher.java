@@ -51,7 +51,7 @@ public class ThrowableCatcher {
 					.openStream();
 			BufferedReader reader = new BufferedReader(
 					new InputStreamReader(is));
-			StringBuffer sb = new StringBuffer();
+			StringBuilder sb = new StringBuilder();
 			String nextLine = null;
 			while ((nextLine = reader.readLine()) != null)
 				sb.append(nextLine);

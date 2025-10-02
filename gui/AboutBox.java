@@ -43,21 +43,58 @@ public class AboutBox extends JWindow {
 
 	/**
 	 * Instantiates a new <TT>AboutBox</TT>.
-	 * 
+	 *
 	 * @param owner
 	 *            the owner of this about box
 	 */
 	public AboutBox(Frame owner) {
 		super(owner);
-		getContentPane().setLayout(new OverlayLayout(getContentPane()));
+		getContentPane().setLayout(new BorderLayout());
+
+		// Create a simple panel to display the image
 		JPanel panel = new JPanel(new BorderLayout());
 		panel.setOpaque(false);
-		panel.setBorder(new EmptyBorder(3, 3, 3, 3));
-		JPanel fullPanel = new JPanel(new BorderLayout());
-		fullPanel.setOpaque(false);
-		panel.add(fullPanel, BorderLayout.SOUTH);
-		getContentPane().add(panel);
-		getContentPane().add(new ImageDisplayComponent(IMAGE));
+		panel.setBorder(new EmptyBorder(2, 2, 2, 2));
+
+		// Add the image display component with scaled image
+		if (IMAGE != null) {
+			ImageDisplayComponent imageComponent = new ImageDisplayComponent(IMAGE);
+			// Scale the image to make the window even smaller
+			Image scaledImage = IMAGE.getScaledInstance(324, 97, Image.SCALE_SMOOTH);
+			imageComponent.setImage(scaledImage);
+			panel.add(imageComponent, BorderLayout.CENTER);
+		} else {
+			// Fallback: display text if image can't be loaded
+			JLabel textLabel = new JLabel("JFLAP - Formal Languages and Automata Package", JLabel.CENTER);
+			textLabel.setFont(new Font("SansSerif", Font.BOLD, 12));
+			textLabel.setForeground(Color.BLACK);
+			panel.add(textLabel, BorderLayout.CENTER);
+		}
+
+		// Create bottom panel with version and close button
+		JPanel bottomPanel = new JPanel(new BorderLayout());
+		bottomPanel.setOpaque(false);
+
+		// Add version information
+		JLabel versionLabel = new JLabel("JFLAP Version " + VERSION, JLabel.CENTER);
+		versionLabel.setForeground(Color.BLACK);
+		versionLabel.setFont(new Font("SansSerif", Font.BOLD, 9));
+		bottomPanel.add(versionLabel, BorderLayout.CENTER);
+
+		// Add close button
+		JButton closeButton = new JButton("Close");
+		closeButton.setFont(new Font("SansSerif", Font.PLAIN, 8));
+		closeButton.addActionListener(e -> setVisible(false));
+		bottomPanel.add(closeButton, BorderLayout.EAST);
+
+		panel.add(bottomPanel, BorderLayout.SOUTH);
+
+		getContentPane().add(panel, BorderLayout.CENTER);
+
+		// Set appropriate size
+		pack();
+
+		// Add mouse listener for click-to-close (preserve original behavior)
 		addMouseListener(new BoxDismisser());
 	}
 
@@ -133,10 +170,18 @@ public class AboutBox extends JWindow {
 
 	static {
 		try {
-			IMAGE = Toolkit.getDefaultToolkit().getImage(
-					OBJECT.getClass().getResource("/MEDIA/about.png"));
-		} catch (NullPointerException e) {
-
+			java.net.URL url = gui.ResourceLoader.getResource("MEDIA/about.png");
+			if (url != null) {
+				IMAGE = Toolkit.getDefaultToolkit().getImage(url);
+				// Wait for image to load
+				MediaTracker tracker = new MediaTracker(new JPanel());
+				tracker.addImage(IMAGE, 0);
+				tracker.waitForID(0);
+			} else {
+				System.err.println("Warning: Could not find about image: MEDIA/about.png");
+			}
+		} catch (Exception e) {
+			System.err.println("Warning: Could not load about image: MEDIA/about.png - " + e.getMessage());
 		}
 	}
 }
