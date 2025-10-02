@@ -9,12 +9,12 @@ repositories {
 
 dependencies {
     // Modern SVG library - replacing Batik 1.17
-    implementation 'org.apache.xmlgraphics:batik-svggen:1.17'
-    implementation 'org.apache.xmlgraphics:batik-swing:1.17'
-    implementation 'org.apache.xmlgraphics:batik-transcoder:1.17'
-    implementation 'org.apache.xmlgraphics:batik-dom:1.17'
-    implementation 'org.apache.xmlgraphics:batik-bridge:1.17'
-    implementation 'org.apache.xmlgraphics:batik-util:1.17'
+    implementation 'org.apache.xmlgraphics:batik-svggen:1.19'
+    implementation 'org.apache.xmlgraphics:batik-swing:1.19'
+    implementation 'org.apache.xmlgraphics:batik-transcoder:1.19'
+    implementation 'org.apache.xmlgraphics:batik-dom:1.19'
+    implementation 'org.apache.xmlgraphics:batik-bridge:1.19'
+    implementation 'org.apache.xmlgraphics:batik-util:1.19'
 
     // Testing dependencies
     testImplementation 'junit:junit:4.13.2'
