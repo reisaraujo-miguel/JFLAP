@@ -14,7 +14,7 @@ updates:
         patterns:
           - "*"
 
-  # Maintain dependencies for Gradle
+  # Maintain dependencies for Gradle (includes wrapper)
   - package-ecosystem: "gradle"
     directory: "/"
     schedule:
@@ -24,21 +24,15 @@ updates:
       gradle-dependencies:
         patterns:
           - "*"
+    # Separate group for Gradle wrapper updates
+    groups:
+      gradle-wrapper:
+        patterns:
+          - "gradle"
     # Allow up to 10 open pull requests for dependencies
     open-pull-requests-limit: 10
     # Ignore major version updates for now
     ignore:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
-
-  # Maintain dependencies for Gradle wrapper
-  - package-ecosystem: "gradle"
-    directory: "/"
-    schedule:
-      interval: "monthly"
-    # Only update the Gradle wrapper
-    groups:
-      gradle-wrapper:
-        patterns:
-          - "gradle"
 
