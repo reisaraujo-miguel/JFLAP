@@ -1,0 +1,58 @@
+app-id: io.github.reisaraujo_miguel.jflap-ng
+runtime: org.freedesktop.Platform
+runtime-version: '25.08'
+sdk: org.freedesktop.Sdk
+command: jflap-ng
+
+sdk-extensions:
+    - org.freedesktop.Sdk.Extension.openjdk25
+
+finish-args:
+  # XDG Desktop Portals for file access
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --socket=pulseaudio
+  - --device=dri
+  # File system access
+  - --filesystem=xdg-documents
+  - --filesystem=xdg-download
+  - --filesystem=xdg-pictures
+  # XDG portals for file dialogs
+  - --talk-name=org.freedesktop.FileManager1
+  - --talk-name=org.freedesktop.portal.*
+
+modules:
+  - name: openjdk
+    buildsystem: simple
+    build-commands:
+      - /usr/lib/sdk/openjdk25/install.sh
+
+  - name: jflap-ng
+    buildsystem: simple
+    build-commands:
+      # Build the application using Gradle
+      - ./gradlew build fatJar
+      # Create the application directory structure
+      - install -D "build/lib/JFLAP-NG_Fat-fat.jar" /app/share/jflap-ng.jar
+    post-install:
+      - install -Dm0644 LICENSE -t ${FLATPAK_DEST}/share/licenses/$FLATPAK_ID/jflap-ng
+
+    sources:
+      - type: git
+        url: https://github.com/reisaraujo-miguel/jflap-ng.git
+        tag: v8.0-beta2 
+        commit: ab7c436ea280e5e77921f5f585ff09ffc5f332a0
+
+      - type: script
+        dest: jflap-ng
+        commands:
+          - java -jar /app/share/jflap-ng.jar
+
+      - type: file
+        path: io.github.reisaraujo_miguel.jflap-ng.desktop
+
+      - type: file
+        path: io.github.reisaraujo_miguel.jflap-ng.metainfo.xml
+
+

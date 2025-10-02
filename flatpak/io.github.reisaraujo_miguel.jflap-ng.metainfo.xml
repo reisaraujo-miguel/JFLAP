@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2025 Miguel R. Araújo -->
+<component type="desktop-application">
+	<id>io.github.reisaraujo_miguel.jflap-ng</id>
+
+	<name>JFLAP NG</name>
+	<developer_name>Miguel R. Araujo</developer_name>
+	<summary>Formal languages testing</summary>
+
+	<metadata_license>CC0-1.0</metadata_license>
+	<project_license>
+		LicenseRef-proprietary=https://github.com/reisaraujo-miguel/jflap-ng/blob/main/LICENSE</project_license>
+	<url type="homepage">https://github.com/reisaraujo-miguel/jflap-ng</url>
+	<url type="help">https://www.jflap.org/tutorial/</url>
+	<url type="contact">https://github.com/reisaraujo-miguel</url>
+
+	<description>
+		<p>
+			JFLAP NG is a modern fork of JFLAP, a program for experimenting with formal languages topics
+			including nondeterministic finite automata, nondeterministic pushdown automata, multi-tape
+			Turing machines, several types of grammars, parsing, and L-systems. In addition to
+			constructing and testing examples for these, JFLAP allows one to experiment with construction
+			proofs from one form to another, such as converting an NFA to a DFA to a minimal state DFA to
+			a regular expression or regular grammar.
+		</p>
+	</description>
+
+	<launchable type="desktop-id">io.github.reisaraujo_miguel.jflap-ng.desktop</launchable>
+	<screenshots>
+		<screenshot type="default">
+			<image>
+				https://raw.githubusercontent.com/reisaraujo-miguel/jflap-ng/refs/heads/main/DOCS/images/finite-automaton.png</image>
+			<caption>Finite automaton simulation</caption>
+		</screenshot>
+		<screenshot>
+			<image>
+				https://raw.githubusercontent.com/reisaraujo-miguel/jflap-ng/refs/heads/main/DOCS/images/turing.png</image>
+			<caption>Turing machine editor</caption>
+		</screenshot>
+		<screenshot>
+			<image>
+				https://raw.githubusercontent.com/reisaraujo-miguel/jflap-ng/refs/heads/main/DOCS/images/menu.png</image>
+			<caption>Main menu options</caption>
+		</screenshot>
+		<screenshot>
+			<image>
+				https://raw.githubusercontent.com/reisaraujo-miguel/jflap-ng/refs/heads/main/DOCS/images/grammar.png</image>
+			<caption>Grammar editor</caption>
+		</screenshot>
+	</screenshots>
+
+	<content_rating type="oars-1.1" />
+
+	<releases>
+		<release version="8.0" date="2025-10-02" />
+	</releases>
+</component>

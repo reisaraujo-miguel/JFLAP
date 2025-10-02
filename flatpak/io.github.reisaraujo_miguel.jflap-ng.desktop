@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=JFLAP-NG
+Comment=Formal Languages and Automata Package
+Exec=jflap-ng
+Icon=io.github.reisaraujo-miguel.jflap-ng
+Categories=Education;Science;
+Keywords=automata;formal languages;computer science;education;
