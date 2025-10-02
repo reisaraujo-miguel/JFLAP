@@ -68,7 +68,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: jflap-release
-        path: build/libs/JFLAP_Fat-*.jar
+        path: build/libs/JFLAP_Fat-fat.jar
         retention-days: 30
 
   release:

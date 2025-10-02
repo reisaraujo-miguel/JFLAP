@@ -112,8 +112,12 @@ task fatJar(type: Jar) {
         attributes 'Main-Class': 'gui.Main'
     }
     archiveBaseName = 'JFLAP_Fat'
-    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
-    with jar
+    archiveClassifier = 'fat'
+    from sourceSets.main.output
+    dependsOn configurations.runtimeClasspath
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
 
