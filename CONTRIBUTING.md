@@ -37,7 +37,7 @@ Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md) to help us main
 
 3. **Add the upstream repository** (optional but recommended):
    ```bash
-   git remote add upstream https://github.com/original-owner/jflap.git
+   git remote add upstream https://github.com/reisaraujo-miguel/jflap.git
    ```
 
 4. **Build the project** to ensure everything works:
