@@ -76,7 +76,7 @@ public class AboutBox extends JWindow {
 		bottomPanel.setOpaque(false);
 
 		// Add version information
-		JLabel versionLabel = new JLabel("JFLAP Version " + VERSION, JLabel.CENTER);
+		        JLabel versionLabel = new JLabel("JFLAP NG Version " + VERSION, JLabel.CENTER);
 		versionLabel.setForeground(Color.BLACK);
 		versionLabel.setFont(new Font("SansSerif", Font.BOLD, 11));
 		bottomPanel.add(versionLabel, BorderLayout.CENTER);
