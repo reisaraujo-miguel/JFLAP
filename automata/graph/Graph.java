@@ -58,7 +58,7 @@ public class Graph {
 	public Set<Object> adjacent(Object vertex) {
 		if (!verticesToNeighbors.containsKey(vertex))
 			verticesToNeighbors.put(vertex, new HashSet<>());
-		return (Set<Object>) verticesToNeighbors.get(vertex);
+		return verticesToNeighbors.get(vertex);
 	}
 
 	/** Adds an edge between two vertices. */
@@ -86,9 +86,8 @@ public class Graph {
 	/** Removes a vertex. */
 	public void removeVertex(Object vertex) {
 		Set<Object> others = adjacent(vertex);
-		Iterator<Object> it = others.iterator();
-		while (it.hasNext())
-			adjacent(it.next()).remove(vertex);
+		for (Object other : others)
+			adjacent(other).remove(vertex);
 		verticesToNeighbors.remove(vertex);
 		verticesToPoints.remove(vertex);
 	}

@@ -95,7 +95,7 @@ public class NFAToDFA {
 	/**
 	 * Returns true if one or more of the states in <CODE>states</CODE> are
 	 * final.
-	 * 
+	 *
 	 * @param states
 	 *            the set of states
 	 * @param automaton
@@ -104,8 +104,8 @@ public class NFAToDFA {
 	 *         final
 	 */
 	public boolean hasFinalState(State[] states, Automaton automaton) {
-		for (int k = 0; k < states.length; k++) {
-			if (automaton.isFinalState(states[k]))
+		for (State state : states) {
+			if (automaton.isFinalState(state))
 				return true;
 		}
 		return false;
@@ -113,7 +113,7 @@ public class NFAToDFA {
 
 	/**
 	 * Returns the State array mapped to <CODE>state</CODE>.
-	 * 
+	 *
 	 * @param state
 	 *            the state.
 	 * @param automaton
@@ -129,12 +129,12 @@ public class NFAToDFA {
 		while (tokenizer.hasMoreTokens())
 			states.add(automaton.getStateWithID(Integer.parseInt(tokenizer
 					.nextToken())));
-		return (State[]) states.toArray(new State[0]);
+		return states.toArray(new State[0]);
 	}
 
 	/**
 	 * Returns a string representation of <CODE>states</CODE>.
-	 * 
+	 *
 	 * @param states
 	 *            the set of states.
 	 * @return a string representation of <CODE>states</CODE>.
@@ -142,17 +142,17 @@ public class NFAToDFA {
 	public String getStringForStates(State[] states) {
 		StringBuilder buffer = new StringBuilder();
 		for (int k = 0; k < states.length - 1; k++) {
-			buffer.append(Integer.toString(states[k].getID()));
+			buffer.append(states[k].getID());
 			buffer.append(",");
 		}
-		buffer.append(Integer.toString(states[states.length - 1].getID()));
+		buffer.append(states[states.length - 1].getID());
 		return buffer.toString();
 	}
 
 	/**
 	 * Returns all states reachable on <CODE>terminal</CODE> from <CODE>states</CODE>,
 	 * including the closure of all reachable states.
-	 * 
+	 *
 	 * @param terminal
 	 *            the terminal (alphabet character)
 	 * @param states
@@ -166,29 +166,28 @@ public class NFAToDFA {
 	public State[] getStatesOnTerminal(String terminal, State[] states,
 			Automaton automaton) {
 		ArrayList<State> list = new ArrayList<>();
-		for (int k = 0; k < states.length; k++) {
-			State state = states[k];
+		for (State state : states) {
 			Transition[] transitions = automaton.getTransitionsFromState(state);
-			for (int i = 0; i < transitions.length; i++) {
-				FSATransition transition = (FSATransition) transitions[i];
-				if (transition.getLabel().equals(terminal)) {
-					State toState = transition.getToState();
+			for (Transition transition : transitions) {
+				FSATransition fsaTransition = (FSATransition) transition;
+				if (fsaTransition.getLabel().equals(terminal)) {
+					State toState = fsaTransition.getToState();
 					State[] closure = ClosureTaker.getClosure(toState,
 							automaton);
-					for (int j = 0; j < closure.length; j++) {
-						if (!list.contains(closure[j])) {
-							list.add(closure[j]);
+					for (State closureState : closure) {
+						if (!list.contains(closureState)) {
+							list.add(closureState);
 						}
 					}
 				}
 			}
 		}
-		return (State[]) list.toArray(new State[0]);
+		return list.toArray(new State[0]);
 	}
 
 	/**
 	 * Returns true if <CODE>states</CODE> contains <CODE>state</CODE>
-	 * 
+	 *
 	 * @param state
 	 *            the state.
 	 * @param states
@@ -196,8 +195,8 @@ public class NFAToDFA {
 	 * @return true if <CODE>states</CODE> contains <CODE>state</CODE>
 	 */
 	private boolean containsState(State state, State[] states) {
-		for (int k = 0; k < states.length; k++) {
-			if (states[k] == state)
+		for (State s : states) {
+			if (s == state)
 				return true;
 		}
 		return false;
@@ -206,7 +205,7 @@ public class NFAToDFA {
 	/**
 	 * Returns true if <CODE>states1</CODE> and <CODE>states2</CODE> are
 	 * identical (i.e. they contain exactly the same states, and no extras).
-	 * 
+	 *
 	 * @param states1
 	 *            a set of states
 	 * @param states2
@@ -220,18 +219,10 @@ public class NFAToDFA {
 		int len2 = states2.length;
 		if (len1 != len2)
 			return false;
-		
-	    Arrays.sort(states1, new Comparator<State>(){
-	    	    public int compare(State s, State t){
-	                return s.hashCode() - t.hashCode();	        	
-	    	    }
-	    }); 
-	    Arrays.sort(states2, new Comparator<State>(){
-	    	    public int compare(State s, State t){
-	                return s.hashCode() - t.hashCode();	        	
-	    	    }
-	    }); 
-		
+
+	    Arrays.sort(states1, (s, t) -> s.hashCode() - t.hashCode());
+	    Arrays.sort(states2, (s, t) -> s.hashCode() - t.hashCode());
+
 		for (int k = 0; k < states1.length; k++) {
 //			if (!containsState(states1[k], states2))
 //				return false;
@@ -243,7 +234,7 @@ public class NFAToDFA {
 
 	/**
 	 * Returns the State mapped to <CODE>states</CODE>.
-	 * 
+	 *
 	 * @param states
 	 *            the states
 	 * @param dfa
@@ -252,10 +243,10 @@ public class NFAToDFA {
 	 */
 	public State getStateForStates(State[] states, Automaton dfa, Automaton nfa) {
 		State[] dfaStates = dfa.getStates();
-		for (int k = 0; k < dfaStates.length; k++) {
-			State[] nfaStates = getStatesForState(dfaStates[k], nfa);
+		for (State dfaState : dfaStates) {
+			State[] nfaStates = getStatesForState(dfaState, nfa);
 			if (containSameStates(nfaStates, states)) {
-				return dfaStates[k];
+				return dfaState;
 			}
 		}
 		return null;
