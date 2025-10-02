@@ -111,7 +111,7 @@ task fatJar(type: Jar) {
     manifest {
         attributes 'Main-Class': 'gui.Main'
     }
-    archiveBaseName = 'JFLAP_Fat'
+    archiveBaseName = 'JFLAP-NG_Fat'
     archiveClassifier = 'fat'
     from sourceSets.main.output
     dependsOn configurations.runtimeClasspath
