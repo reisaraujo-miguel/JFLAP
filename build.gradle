@@ -8,14 +8,6 @@ repositories {
     maven { url "./offline-repository" }
 }
 
-pluginManagement {
-    repositories {
-        maven {
-            url = "./offline-repository"
-        }
-    }
-}
-
 dependencies {
     // Modern SVG library - replacing Batik 1.17
     implementation 'org.apache.xmlgraphics:batik-svggen:1.19'
