@@ -1,14 +1,22 @@
-# JFLAP-NG 8.0 Release Notes
+# JFLAP-NG 8.0-beta2 Release Notes
 
 ## Overview
-JFLAP (Java Formal Languages and Automata Package) version 8.0 is a major release that includes significant improvements to the build system, testing infrastructure, and overall code quality.
+JFLAP (Java Formal Languages and Automata Package) version 8.0-beta2 is a major release that includes Java 25 support, modernized codebase, and significant improvements to the build system and overall code quality. This release focuses on modernizing the codebase to leverage Java 25 features while maintaining full backward compatibility.
 
 ## New Features & Improvements
+
+### Java 25 Support
+- **Java 25 Compatibility**: Full support for Java 25 language features
+- **Modern Code Patterns**: Updated codebase to use Java 25 idioms and best practices
+- **Enhanced Performance**: Leverages Java 25 performance improvements
+- **Code Modernization**: Replaced legacy iterator patterns with enhanced for-loops
+- **Type Safety**: Eliminated unnecessary explicit casting and improved generics usage
+- **Lambda Expressions**: Replaced anonymous inner classes with modern lambda syntax
 
 ### Build System
 - **Gradle Build System**: Migrated from legacy build system to modern Gradle
 - **Dependency Management**: Updated to use modern Batik SVG libraries (1.17)
-- **Java 21 Support**: Updated to target Java 21 for better performance and features
+- **Java 25 Support**: Updated to target Java 25 for latest features and performance
 
 ### Testing Infrastructure
 - **Unit Testing**: Comprehensive unit tests for core functionality
@@ -36,13 +44,13 @@ JFLAP (Java Formal Languages and Automata Package) version 8.0 is a major releas
 - Removed: `xerces:xercesImpl` (replaced by Java built-in XML processing)
 
 ### Build Configuration
-- Source compatibility: Java 21
-- Target compatibility: Java 21
+- Source compatibility: Java 25
+- Target compatibility: Java 25
 - Main class: `gui.Main`
 - Resource directories properly preserved in build output
 
 ## System Requirements
-- **Java**: Version 21 or later
+- **Java**: Version 25 or later
 - **Operating System**: Windows, macOS, Linux
 
 ## Getting Started
