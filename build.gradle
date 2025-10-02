@@ -1,0 +1,107 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Modern SVG library - replacing Batik 1.17
+    implementation 'org.apache.xmlgraphics:batik-svggen:1.17'
+    implementation 'org.apache.xmlgraphics:batik-swing:1.17'
+    implementation 'org.apache.xmlgraphics:batik-transcoder:1.17'
+    implementation 'org.apache.xmlgraphics:batik-dom:1.17'
+    implementation 'org.apache.xmlgraphics:batik-bridge:1.17'
+    implementation 'org.apache.xmlgraphics:batik-util:1.17'
+
+    // Remove unused dependencies: rhino-1.7.7.jar, fop-transcoder-allinone-2.9.jar
+    // xml-apis-1.4.01.jar and xml-apis-ext-1.3.04.jar are replaced by modern Java XML APIs
+    // xerces:xercesImpl is no longer needed as Java has built-in XML processing
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+application {
+    mainClass = 'gui.Main'
+}
+
+// Include all source directories
+def sourceDirs = []
+file('.').listFiles().each { dir ->
+    if (dir.isDirectory() && dir.name != 'build' && dir.name != 'gradle' && dir.name != 'lib' && dir.name != '.git') {
+        sourceDirs += dir.path
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = sourceDirs
+        }
+        resources {
+            srcDirs = ['ICON', 'MEDIA', 'DOCS', 'META-INF']
+        }
+    }
+}
+
+processResources {
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}
+
+run {
+    // Ensure resources are available during runtime
+    classpath = sourceSets.main.runtimeClasspath
+    systemProperty "java.class.path", classpath.asPath
+
+    // Explicitly include resource directories in runtime
+    workingDir = projectDir
+}
+
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'gui.Main',
+            'Implementation-Title': 'JFLAP',
+            'Implementation-Version': '4.0',
+            'Built-By': System.getProperty('user.name'),
+            'Built-Date': new Date(),
+            'Built-JDK': System.getProperty('java.version')
+        )
+    }
+
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+
+    // Include all resource directories
+    from('ICON') {
+        into 'ICON'
+    }
+    from('MEDIA') {
+        into 'MEDIA'
+    }
+    from('DOCS') {
+        into 'DOCS'
+    }
+    from('META-INF') {
+        into 'META-INF'
+    }
+
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': 'gui.Main'
+    }
+    archiveBaseName = 'JFLAP_Fat'
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
