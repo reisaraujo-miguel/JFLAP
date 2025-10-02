@@ -45,7 +45,6 @@ hs_err_pid*
 target/
 
 # Gradle
-.gradle/
 build/
 
 # IntelliJ IDEA
