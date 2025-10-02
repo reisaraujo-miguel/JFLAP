@@ -1,11 +1,22 @@
-# JFLAP - Java Formal Languages and Automata Package
+# JFLAP-Modern - Community-Maintained Fork
 
 [![CI/CD Pipeline](https://github.com/your-username/jflap/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/your-username/jflap/actions/workflows/ci-cd.yml)
 [![License](https://img.shields.io/badge/License-JFLAP-blue.svg)](LICENSE)
 [![Java](https://img.shields.io/badge/Java-21-orange.svg)](https://openjdk.org/projects/jdk/21/)
 [![Gradle](https://img.shields.io/badge/Gradle-9.1.0-green.svg)](https://gradle.org/)
+[![Community Fork](https://img.shields.io/badge/Community-Fork-yellow.svg)](CONTRIBUTORS.md)
 
-JFLAP is a package of graphical tools for experimenting with formal languages and automata. Originally developed at Duke University, it provides an interactive environment for creating, testing, and visualizing various computational models.
+**JFLAP-Modern** is a community-maintained fork of the original JFLAP (Java Formal Languages and Automata Package), originally developed at Duke University. This fork provides modern build infrastructure, updated dependencies, and improved development workflows while maintaining compatibility with the original JFLAP functionality.
+
+> **⚠️ Important Note**: This is a community-maintained fork, not the official Duke University version. The original JFLAP was developed at Duke University by Professor Susan Rodger and her students. This fork maintains the original educational purpose while providing modern development tooling.
+
+## Key Differences from Original JFLAP
+
+- **Modern Build System**: Gradle-based build instead of legacy build system
+- **Java 21 Compatibility**: Updated for modern Java versions
+- **CI/CD Pipeline**: Automated testing and releases via GitHub Actions
+- **Updated Dependencies**: Modern Batik SVG libraries and testing frameworks
+- **Community Development**: Open to community contributions and improvements
 
 ## Features
 
@@ -141,13 +152,33 @@ JFLAP is distributed under the JFLAP License. See the [LICENSE](LICENSE) file fo
 
 JFLAP was originally developed at Duke University by Susan Rodger and her students. See [CONTRIBUTORS.md](CONTRIBUTORS.md) for a complete list of contributors.
 
+## Migration from Original JFLAP
+
+If you're migrating from the original JFLAP to this community-maintained version:
+
+### For Users
+- **File Compatibility**: All JFLAP file formats (.jff, .jflap) are fully compatible
+- **Java Requirement**: Requires Java 21 or later (original may work with older Java)
+- **Flatpak**: A new Flatpak package will be available as `jflap-modern` or similar
+
+### For Developers
+- **Build System**: Uses Gradle instead of legacy build tools
+- **Dependencies**: Updated to modern library versions
+- **Testing**: Comprehensive unit test suite included
+- **CI/CD**: Automated builds and releases via GitHub Actions
+
 ## Version History
 
+### JFLAP-Modern (Community Fork)
 - **8.0** (Current): Modernized build system, Java 21 support, CI/CD pipeline
+
+### Original JFLAP (Duke University)
 - **7.1**: Previous stable release with legacy build system
 - **Earlier versions**: Various improvements and feature additions
 
 ---
 
-*JFLAP - Making formal languages and automata theory accessible and interactive since 2002*
+*JFLAP-Modern - Community-maintained continuation of the educational tool for formal languages and automata theory*
+
+*Original JFLAP developed at Duke University (2002-2009)*
 
