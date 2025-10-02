@@ -1,0 +1,464 @@
+[
+  {
+    "type": "file",
+    "url": "https://plugins.gradle.org/m2/com/google/code/gson/gson-parent/2.12.1/gson-parent-2.12.1.pom",
+    "sha512": "e099a89999f863e95465baceeba2490fec16032a4eedf0955e3ec230ede9d5e2e6658a3f527a34a651ff3f3121713148e4afd4a03a97f8b0e145f152dae199b7",
+    "dest": "./offline-repository/com/google/code/gson/gson-parent/2.12.1",
+    "dest-filename": "gson-parent-2.12.1.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://plugins.gradle.org/m2/com/google/code/gson/gson/2.12.1/gson-2.12.1.jar",
+    "sha512": "fafc369544e2d4a89f32c353dcbd012410a64a315a3cae9165d4ead6f8960aef5f77ced84c374d6a09af117748adca571b0426eb0e2864f584debb59707ebc03",
+    "dest": "./offline-repository/com/google/code/gson/gson/2.12.1",
+    "dest-filename": "gson-2.12.1.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://plugins.gradle.org/m2/com/google/code/gson/gson/2.12.1/gson-2.12.1.pom",
+    "sha512": "49aca8b17b4b4377dd358a356aec85d2105b5c8fca2a88fd4f5b5454a7f7e952980e0754e070adfa7136d01b9442c6efacc989c8a25d9928267c9fe3e869c61f",
+    "dest": "./offline-repository/com/google/code/gson/gson/2.12.1",
+    "dest-filename": "gson-2.12.1.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://plugins.gradle.org/m2/com/google/errorprone/error_prone_annotations/2.36.0/error_prone_annotations-2.36.0.jar",
+    "sha512": "bd6f5650902526d3db06aa1cc7bd36723658166acfabb823aca27d0b2c3814e83ae24a8217ce915c3e194c2c696a102580b4c21ef5dba61f7610bcb8d580f566",
+    "dest": "./offline-repository/com/google/errorprone/error_prone_annotations/2.36.0",
+    "dest-filename": "error_prone_annotations-2.36.0.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://plugins.gradle.org/m2/com/google/errorprone/error_prone_annotations/2.36.0/error_prone_annotations-2.36.0.pom",
+    "sha512": "0c1d663f70a1bec083cdd007b1ee673df144bbfbd4d065c7cad0edba8410bcd1f578902133155a534a1506a82d6a6aa211b4e6c907c4df25b0da4c781caa9008",
+    "dest": "./offline-repository/com/google/errorprone/error_prone_annotations/2.36.0",
+    "dest-filename": "error_prone_annotations-2.36.0.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://plugins.gradle.org/m2/com/google/errorprone/error_prone_parent/2.36.0/error_prone_parent-2.36.0.pom",
+    "sha512": "8157ba706ab6932cb428ebd295693477491a7439341c95994f492a10cc3b3222b30a3777e61a9f208fcd1623fc613a3a7fd3cc22c95c56c64e3dbb9d3ca5aeed",
+    "dest": "./offline-repository/com/google/errorprone/error_prone_parent/2.36.0",
+    "dest-filename": "error_prone_parent-2.36.0.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.17.0/commons-io-2.17.0.jar",
+    "sha512": "98bc665c16268ff1074f415f493ba66d214ac23665b6e964086b60d523b35b1b03fd2e79211e84aa8ebf0921ea028f992827e4642fd086d7104a408b454d38ce",
+    "dest": "./offline-repository/commons-io/commons-io/2.17.0",
+    "dest-filename": "commons-io-2.17.0.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.17.0/commons-io-2.17.0.pom",
+    "sha512": "05d3168d083d0357cadf7b3eca99c97c75b9f275443a50c6af76d51f7add6e6bf31f84262d22aba736ff3d656d94f98fe8bd16cdedf74bd65142c2db8d8180e7",
+    "dest": "./offline-repository/commons-io/commons-io/2.17.0",
+    "dest-filename": "commons-io-2.17.0.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.3.0/commons-logging-1.3.0.jar",
+    "sha512": "481c3bf16acceb349d2da7db5b66ea367c4093f795247bf53f5206f77260a0ae6ad636996cac4d074aaaf9788ba39d1428ced7f4348d1d56439bdb257196ee23",
+    "dest": "./offline-repository/commons-logging/commons-logging/1.3.0",
+    "dest-filename": "commons-logging-1.3.0.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.3.0/commons-logging-1.3.0.pom",
+    "sha512": "7e1bb294235077c45b8d3865f40a917661a8edfa0012eed686e39af3006c1a528075ea8c88a559f1df2830090af7288c5cc74606e4e66620b7f28e4af04384c9",
+    "dest": "./offline-repository/commons-logging/commons-logging/1.3.0",
+    "dest-filename": "commons-logging-1.3.0.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://plugins.gradle.org/m2/io/github/jwharm/flatpak-gradle-generator/io.github.jwharm.flatpak-gradle-generator.gradle.plugin/1.5.0/io.github.jwharm.flatpak-gradle-generator.gradle.plugin-1.5.0.pom",
+    "sha512": "d95ab753c7e295958260ad47da3271089e2e81554eb6bb5ae0acbb2b76dcbbfc8f67088a95b4fca917b882f7c6ccffc6e72a5941312b22f83f7402e3f758ae58",
+    "dest": "./offline-repository/io/github/jwharm/flatpak-gradle-generator/io.github.jwharm.flatpak-gradle-generator.gradle.plugin/1.5.0",
+    "dest-filename": "io.github.jwharm.flatpak-gradle-generator.gradle.plugin-1.5.0.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://plugins.gradle.org/m2/io/github/jwharm/flatpak-gradle-generator/plugin/1.5.0/plugin-1.5.0.jar",
+    "sha512": "010a05bdf5a7b0338b921577ce9fbff3f221aff8994926c9c4cd6965cf11047ded07485faeb092b7d2bd6ed1973a7171971940841ba52ea080bb382cffcb1115",
+    "dest": "./offline-repository/io/github/jwharm/flatpak-gradle-generator/plugin/1.5.0",
+    "dest-filename": "plugin-1.5.0.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://plugins.gradle.org/m2/io/github/jwharm/flatpak-gradle-generator/plugin/1.5.0/plugin-1.5.0.module",
+    "sha512": "94948fffea8525b0dcaa23099d671a99995a1cef93208a7795d3c6fdc8f68c68420c2f9451211ff112dac15798e22d43f66aeb93fe5e5f4dbf0d5ae1f417ea97",
+    "dest": "./offline-repository/io/github/jwharm/flatpak-gradle-generator/plugin/1.5.0",
+    "dest-filename": "plugin-1.5.0.module"
+  },
+  {
+    "type": "file",
+    "url": "https://plugins.gradle.org/m2/io/github/jwharm/flatpak-gradle-generator/plugin/1.5.0/plugin-1.5.0.pom",
+    "sha512": "b090e4a56bfe11148ffa841c6fdb95a8181105365182f6380b3ec38b09d757897e78e087dd92d05d68c2c91f0aa49ce0d9e166aa6bd0b7b92d71a1a73a9ac494",
+    "dest": "./offline-repository/io/github/jwharm/flatpak-gradle-generator/plugin/1.5.0",
+    "dest-filename": "plugin-1.5.0.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/apache/3/apache-3.pom",
+    "sha512": "2e07dc80988c9cc3ddef4d31dba266aa71f01f25e1e8bf541d3c538c8d7c9c19c7d3c8bcd2a7e19693da311d32911dd677fb4a44e48ceaae25d5ff91cc77bcf7",
+    "dest": "./offline-repository/org/apache/apache/3",
+    "dest-filename": "apache-3.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/apache/31/apache-31.pom",
+    "sha512": "12563230cf16a646d4a20453e6ae98e9f8eb5abf89502620314c7040f2c006cd0795c7615e02a0f4c6e1d87328b156fa89b83a9990cfcfb2a0e8fc7b7b9f97f9",
+    "dest": "./offline-repository/org/apache/apache/31",
+    "dest-filename": "apache-31.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/apache/33/apache-33.pom",
+    "sha512": "17ccc60c4670ded2b9b0986c8549c7f7789afb4a194c81d16c9c8de10b514396f241c8b1622150b38a8d3a889f6733af66554685b7b801647b5ddfaccef5537e",
+    "dest": "./offline-repository/org/apache/apache/33",
+    "dest-filename": "apache-33.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/65/commons-parent-65.pom",
+    "sha512": "eb391a76b01ad69072ff6bf775770c7b81d31fede8dd910f6b8700cc8f51b79602addab017f76f5aa9d5e5c0b9cfcec1dcf2cec120a62234ed8c467801f06412",
+    "dest": "./offline-repository/org/apache/commons/commons-parent/65",
+    "dest-filename": "commons-parent-65.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/74/commons-parent-74.pom",
+    "sha512": "bf5e93b7c122302cdb0cd07a58b7ff1b1c28e832045b7fc02ee36c9dcf67e9a1ff79bc30800370678f57ed3251261d49463f775579117cdf395f5a2d909fbe84",
+    "dest": "./offline-repository/org/apache/commons/commons-parent/74",
+    "dest-filename": "commons-parent-74.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-anim/1.19/batik-anim-1.19.jar",
+    "sha512": "d82acdd447fa50bc9bb1c5f982a352a7043f0d9258291bc257f7323c4b865567e7fa4bbad59dba3fe1dee441f5b1ad888c82c0fa5c53c3ac3899eb820449e0e4",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-anim/1.19",
+    "dest-filename": "batik-anim-1.19.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-anim/1.19/batik-anim-1.19.pom",
+    "sha512": "99388b1e898357ec3527b019b897ef5ccf1e429ae2944fc255718633c8b76ddfa199576536642183f0c5c830f8f4da437622788896a57a69cdfc91bbae54e696",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-anim/1.19",
+    "dest-filename": "batik-anim-1.19.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-awt-util/1.19/batik-awt-util-1.19.jar",
+    "sha512": "a530b5e6d5108c8436991e4962776ded1fddedf86421aeb99bccfc732767cdbf0473a575e7a26cff3875958609c5e173f976cdf3820ab1218426b0f24b7aefa0",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-awt-util/1.19",
+    "dest-filename": "batik-awt-util-1.19.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-awt-util/1.19/batik-awt-util-1.19.pom",
+    "sha512": "83e044ee6a8183568441d7374e7b95f75215d9d6bd0b2058bf77d5c3f0fcbcb09c3981e7a73087c2e7c736ef7043b003198ca417322bfc1a1755b4727bbb0792",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-awt-util/1.19",
+    "dest-filename": "batik-awt-util-1.19.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-bridge/1.19/batik-bridge-1.19.jar",
+    "sha512": "7e56417e5574bd715777e62fd48009e29fa8a2697161cae1b39e09ae40801d5bca5491797fa7dc7ab15f630593acc26a2fca547d2f922eccfc0e2f8fa886d289",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-bridge/1.19",
+    "dest-filename": "batik-bridge-1.19.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-bridge/1.19/batik-bridge-1.19.pom",
+    "sha512": "978bd34c2d06927b9c1ab99c44a0d74ed4648d01d5ecb4a59b459659db6a7213092442d23de8042becef617ff9b2e7a9a5fba23d386a81911b48deb1b76492a6",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-bridge/1.19",
+    "dest-filename": "batik-bridge-1.19.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-constants/1.19/batik-constants-1.19.jar",
+    "sha512": "a3b500085c28f20a221e6ec5b27c54fab1405c239765a42c50fd2d1dc4eaaeb093bb8688aed3e5be9478a3a0a04a0d88990e43b253b38636b5f9100946962691",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-constants/1.19",
+    "dest-filename": "batik-constants-1.19.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-constants/1.19/batik-constants-1.19.pom",
+    "sha512": "667c422c6b3d24baff9184a6452b829bdaf099dbf321a7db6adcf78006e48d5fc678dccb17ba1484f6e58833fa935af63180a8e50bb002276306d7f04ee31ddd",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-constants/1.19",
+    "dest-filename": "batik-constants-1.19.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-css/1.19/batik-css-1.19.jar",
+    "sha512": "4c2c509886a6929e3c15dec18d2e7de9926462ba805f221b6be8d180bc3ee2f0dea0deb4c83ca10fd100fba8635ab54a3f9ab17d5e27ff77a19bf885bdc9ea45",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-css/1.19",
+    "dest-filename": "batik-css-1.19.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-css/1.19/batik-css-1.19.pom",
+    "sha512": "f230d304353265127f010c883a73e4213934fcfb23d4a76c7f4bd7815f8183153438f5d3f9042f05e2b40f6deb4aaf417901585c02e200cd9826ba187bdf8e7c",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-css/1.19",
+    "dest-filename": "batik-css-1.19.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-dom/1.19/batik-dom-1.19.jar",
+    "sha512": "fb57f023d09a569881e1086427671317f9c1bf64707b82da672e03c1cb54f60d5dc67b74404488119f78530e12c65f87ef2b9e24bb6c9d77a4fa1110a4ea3493",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-dom/1.19",
+    "dest-filename": "batik-dom-1.19.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-dom/1.19/batik-dom-1.19.pom",
+    "sha512": "9143fd9e69ab89cab6df03118c78e7090bcde301a4d40d8a4e1f83d56df0c8d3439c965ac37074dba27b143d4f7f0eeb8306e701dc087ded56c6838aab3095b3",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-dom/1.19",
+    "dest-filename": "batik-dom-1.19.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-ext/1.19/batik-ext-1.19.jar",
+    "sha512": "91971b41b349c9d8135797f3b77ea9b6c8f97f4d923f12ed112c95f8e94bf0072299ec53c414eea69bfd38439c6a44ff2bbb4e22af50fed66fad9e9d4582d770",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-ext/1.19",
+    "dest-filename": "batik-ext-1.19.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-ext/1.19/batik-ext-1.19.pom",
+    "sha512": "9617d5f745a09cf8e34d0d2cf630fa273548277a2065266884c125898cdb79de2914e34d5cb571478b46bc9db2c25201ca5b8325c03c8d19c60408e1b8a9e035",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-ext/1.19",
+    "dest-filename": "batik-ext-1.19.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-gui-util/1.19/batik-gui-util-1.19.jar",
+    "sha512": "39bcfba858f5e305afd309e87b7f0a25f0428643dedff3f7fd1c6e6faf0b6920e9906d8ff8292d127cdb0148e1089dc4a13d8eb3913cb0d3e564cda9ba4b89fe",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-gui-util/1.19",
+    "dest-filename": "batik-gui-util-1.19.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-gui-util/1.19/batik-gui-util-1.19.pom",
+    "sha512": "14d9f2a47d32a61d108ece9f430c438b7320bb2100066ede32ea014aeddd95699ea5890b63c1136a8984f9a002707014af107eeabfbeab035aa50e8523aa1b77",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-gui-util/1.19",
+    "dest-filename": "batik-gui-util-1.19.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-gvt/1.19/batik-gvt-1.19.jar",
+    "sha512": "fb23cb210f403f5da6f0be7b5f7096b60a81a22f2bdd986c03cfa91c7d7b0dc8dd5cdd650eee66204efbec262d2455c06014d7b8a42fc6d54c59865b6ba99a4b",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-gvt/1.19",
+    "dest-filename": "batik-gvt-1.19.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-gvt/1.19/batik-gvt-1.19.pom",
+    "sha512": "0bf708f335b84585503e7ac90d315ac04e7c6e582c5f41089533c07ab82be33e12f3f13ad0b5584c7d38b69971a43f7e73f14dad9d1693b3190687ffd63979ef",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-gvt/1.19",
+    "dest-filename": "batik-gvt-1.19.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-i18n/1.19/batik-i18n-1.19.jar",
+    "sha512": "bbeec8f5336bc631f3531ea112f018e569fcfdb8997f01f2bf0b5af7bc5658255f63a0e140496bc271c0dd329e38bfa5354254ad7eef4daa366dd2eee891efdc",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-i18n/1.19",
+    "dest-filename": "batik-i18n-1.19.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-i18n/1.19/batik-i18n-1.19.pom",
+    "sha512": "2715570ddccf8c1ffd38abcaba5c2d11de3d33b69f99f29c4fbbfdf6a1645bfb2d4ea5324f3b6bfe1d7358b680952babc681036c926f735bc3b5623ac49576af",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-i18n/1.19",
+    "dest-filename": "batik-i18n-1.19.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-parser/1.19/batik-parser-1.19.jar",
+    "sha512": "13531f810da4068275c43584457b13f4d73353b8aa49d24038747866afe4cfc87a249402ee574839bf9e4d254a905fa01b7605eff04016be7461057955acc125",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-parser/1.19",
+    "dest-filename": "batik-parser-1.19.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-parser/1.19/batik-parser-1.19.pom",
+    "sha512": "ddce2f746950caf46876c6af8a9c0ed1f273dc909bd144a68aa871e6b942d4ffc54e9d47226fadbe28f3bd923a7fcd1950a1d1533e78e53dc6fca36c68300dbd",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-parser/1.19",
+    "dest-filename": "batik-parser-1.19.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-script/1.19/batik-script-1.19.jar",
+    "sha512": "c77966bc64bc757225d0e867d3f46d3c8c988c3213fceb7c15d861326d3c2f5854ae53d4ed39aba25b243f9bd09b9588f03f039e721a59ac9855f40deffb7141",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-script/1.19",
+    "dest-filename": "batik-script-1.19.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-script/1.19/batik-script-1.19.pom",
+    "sha512": "746ae8f49fb49abede5c2644e829b01fea34bd5f91b0ef86f87b8a10f7471b80014db35a4bd45e58a15c52688432cc59a9959202ffc855e49a6daba489d72d77",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-script/1.19",
+    "dest-filename": "batik-script-1.19.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-shared-resources/1.19/batik-shared-resources-1.19.jar",
+    "sha512": "8a05b8aae08e913a9836b0f3e55ba79fa0a5b8c9185070386af47b0e7824555593ad557088fc4d60c9cdaa8d8be9240882eb1bc5484137b89882002e96a78a3d",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-shared-resources/1.19",
+    "dest-filename": "batik-shared-resources-1.19.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-shared-resources/1.19/batik-shared-resources-1.19.pom",
+    "sha512": "d8ca18cb249428f9c9689db1c337668be252dd7cf81e1271d92074836f8e69a6252df086147fec914700f6ec3a8a4680fdea012a116838b1e10d67c0d3b2d8e1",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-shared-resources/1.19",
+    "dest-filename": "batik-shared-resources-1.19.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-svg-dom/1.19/batik-svg-dom-1.19.jar",
+    "sha512": "fd9e5d73a487122306e01c98addef6187e00627c9b65c85c2e52dfe6c00f3b28d3150ac892a833ca97b921eed41eb358076075c539a9f65bc6887d7f50ff7328",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-svg-dom/1.19",
+    "dest-filename": "batik-svg-dom-1.19.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-svg-dom/1.19/batik-svg-dom-1.19.pom",
+    "sha512": "c27d5de4a0ceae28d07195632dd0da6a0d34ba71724864a34e4cf1f70a25e849a0e675202fc69cd8259ce95e80aa947540435c99cf23911faebd1e222f2dd756",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-svg-dom/1.19",
+    "dest-filename": "batik-svg-dom-1.19.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-svggen/1.19/batik-svggen-1.19.jar",
+    "sha512": "a089c758ff21d2eaf31732b588a8aa520d791b8b4b0abb0a3495c7b57501d48962a47527b660400192ea7f8c1b9a2bf9ce4bc603a3fea51b980f8c24cd13db18",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-svggen/1.19",
+    "dest-filename": "batik-svggen-1.19.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-svggen/1.19/batik-svggen-1.19.pom",
+    "sha512": "6287e2504206c63c362dfec61222e2f280f6fe4104467c2269964f2acda2c15248bdd5276fcfd9d57c87617d0ae6797053e8721632cf9b90252572d47007d829",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-svggen/1.19",
+    "dest-filename": "batik-svggen-1.19.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-swing/1.19/batik-swing-1.19.jar",
+    "sha512": "770f9c7235a67e6688ea3dc2a7dc4f2242cba325a8bc3e3f71cfc837bfa672758f24006d0cd041967abc1313425796cec975f1efbe5a0540b1f175b7ceaca98d",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-swing/1.19",
+    "dest-filename": "batik-swing-1.19.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-swing/1.19/batik-swing-1.19.pom",
+    "sha512": "6592a8936b884f74b9986498ffd1381e6f4392ed8f1035fd72b5631974d4fa2609db6e7deac6493e949e102c27d6c3d8f474c021140c06eaf38c2d974d2bd354",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-swing/1.19",
+    "dest-filename": "batik-swing-1.19.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-transcoder/1.19/batik-transcoder-1.19.jar",
+    "sha512": "1f25b4dbc295021b98e5ebeec957c311f0748dc8898829e5ec0f5c84bdb606526a8c82849b4ccdea711b42760ba2ed5a29f631eb711ac75d149be38b4eb5f4b1",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-transcoder/1.19",
+    "dest-filename": "batik-transcoder-1.19.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-transcoder/1.19/batik-transcoder-1.19.pom",
+    "sha512": "f3d75a1ef0dfc0b77ea8de7dfa78d99438fcae1a66af2d7322e347900f23ff6a43dc92657ca48db4f735b0a0a187c533719a63773cfb38a3cf5b0c9ce7e41d28",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-transcoder/1.19",
+    "dest-filename": "batik-transcoder-1.19.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-util/1.19/batik-util-1.19.jar",
+    "sha512": "5dd06c8951d9ec7db312e3d4753f781c73f685e37ba4fff78a29d2847f8927b86c19d623b670abc13fcee33c1890664e534c790b97de56e06cc217821cf504a8",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-util/1.19",
+    "dest-filename": "batik-util-1.19.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-util/1.19/batik-util-1.19.pom",
+    "sha512": "86d7a0dbe93c21113b631ecbfff65864e51e9696897e27b228f6866a502af8f2f6124ebcac8e5e35d078606f819c8102e2b3ed0743da25f6f90cf7c5be36cceb",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-util/1.19",
+    "dest-filename": "batik-util-1.19.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-xml/1.19/batik-xml-1.19.jar",
+    "sha512": "3ad264f6548d7cee846248262862308b2f65f6b364866568a00086bc3b1d65054a02d9120d8907fe73ffb9cad8dc237476ca30fdc582d9a710fce71643633178",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-xml/1.19",
+    "dest-filename": "batik-xml-1.19.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-xml/1.19/batik-xml-1.19.pom",
+    "sha512": "775b696fcb56b4e07db19c46dd377c6da09d8507d913470001a053d19c1b0dad45951a3616a81bc938c3001c6601f55ebd72bef0ad74c0300bc8fa679b410cca",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik-xml/1.19",
+    "dest-filename": "batik-xml-1.19.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik/1.19/batik-1.19.pom",
+    "sha512": "469cb87a855455b24d2985bf1e1901c41cccb391d4008b5c8dad692d83112cd69071b8212476dc723e1c38b1c8cf736408673b69109084155dac40aecb20cf02",
+    "dest": "./offline-repository/org/apache/xmlgraphics/batik/1.19",
+    "dest-filename": "batik-1.19.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/xmlgraphics-commons/2.11/xmlgraphics-commons-2.11.jar",
+    "sha512": "59f74788fe09f6f91fdcda2057294e1eb772eb32f40cee07b4810bc4cb1adfda1552bb7afa07c56dbd7bc73769efbbcf0f806d8a45aba62815d465c2efd44d7a",
+    "dest": "./offline-repository/org/apache/xmlgraphics/xmlgraphics-commons/2.11",
+    "dest-filename": "xmlgraphics-commons-2.11.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/xmlgraphics-commons/2.11/xmlgraphics-commons-2.11.pom",
+    "sha512": "54a309a1a13bced50ca7e2b3ad11d415a380ccc1c54b3b9142bc0cd07cc3864818afe4ad82683e55885682fe42f07926a5a984c77bfe2f4b99fa273ecfba0300",
+    "dest": "./offline-repository/org/apache/xmlgraphics/xmlgraphics-commons/2.11",
+    "dest-filename": "xmlgraphics-commons-2.11.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.1/junit-bom-5.10.1.pom",
+    "sha512": "1b9c3bcea64f5d98f5e39c88adab6d7a9bfcf0ee4e6639a8c146b4b7cb29a4a280b567c6e42a537c215590c557e86b9446a2c9dcf76191d0ecac1ad9bf16f7c8",
+    "dest": "./offline-repository/org/junit/junit-bom/5.10.1",
+    "dest-filename": "junit-bom-5.10.1.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.11.0/junit-bom-5.11.0.pom",
+    "sha512": "ba5473c3ba56865065c3da2c5d79b6f7c50105bc72e8d9d80fed50f6223d18cfcc1a5da921d2c7157f0f2720d96ba3a9ab7a75731ee97cfbd80c293d9e3a3ef5",
+    "dest": "./offline-repository/org/junit/junit-bom/5.11.0",
+    "dest-filename": "junit-bom-5.11.0.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/xml-apis/xml-apis-ext/1.3.04/xml-apis-ext-1.3.04.jar",
+    "sha512": "ac0896b9a3fea71644330daef4eccb33005b5b7ac1e1d1d73eed2b2a1f4b2282057f3c0f3698b899e1c76b19c09c69bf4cd0ee548427b9bcc676b791db5c36bc",
+    "dest": "./offline-repository/xml-apis/xml-apis-ext/1.3.04",
+    "dest-filename": "xml-apis-ext-1.3.04.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/xml-apis/xml-apis-ext/1.3.04/xml-apis-ext-1.3.04.pom",
+    "sha512": "f5c4cc21a9b8f359e610c5661f866c2bbbe4f6e887dd678bee9036dd5ec0e6f771a7e0f302f00d10f7f454d1c7376f3813e880a3ad733449fc81927cd2384e17",
+    "dest": "./offline-repository/xml-apis/xml-apis-ext/1.3.04",
+    "dest-filename": "xml-apis-ext-1.3.04.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar",
+    "sha512": "8db0283b6840cd6407957d296b802e3edf90653e2722f8e29f86c1c0b60996c4b43e9e065e6864dab89b2138ddb0174d9b4fdda4a93f94eeb884783db82f3268",
+    "dest": "./offline-repository/xml-apis/xml-apis/1.4.01",
+    "dest-filename": "xml-apis-1.4.01.jar"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.pom",
+    "sha512": "814138ba9398f277244281968ff82a3f772425b48a720d401ddfcefdab9becce0e87d3475838e07b5ba23383d2106e36c515f35868643079ebe8a37a4381f990",
+    "dest": "./offline-repository/xml-apis/xml-apis/1.4.01",
+    "dest-filename": "xml-apis-1.4.01.pom"
+  }
+]
