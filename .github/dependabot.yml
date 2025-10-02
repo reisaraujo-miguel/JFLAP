@@ -14,18 +14,19 @@ updates:
         patterns:
           - "*"
 
-  # Maintain dependencies for Gradle (includes wrapper)
+  # Maintain dependencies for Gradle (including wrapper)
   - package-ecosystem: "gradle"
     directory: "/"
     schedule:
       interval: "weekly"
-    # Group all Gradle dependency updates together
+    # Separate groups for different types of dependencies
     groups:
+      # Group for project dependencies
       gradle-dependencies:
         patterns:
-          - "*"
-    # Separate group for Gradle wrapper updates
-    groups:
+          - "org.apache.xmlgraphics:*"
+          - "junit:*"
+      # Group for Gradle wrapper
       gradle-wrapper:
         patterns:
           - "gradle"
