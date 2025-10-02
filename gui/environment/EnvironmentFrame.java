@@ -254,7 +254,7 @@ public class EnvironmentFrame extends JFrame {
                     // Check for the existing file.
                 }
 				else{
-                    JOptionPane.showMessageDialog(null, "JFLAP could not determine the selected file name.  Try again.", "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "JFLAP-NG could not determine the selected file name.  Try again.", "Error", JOptionPane.ERROR_MESSAGE);
                     file = null;
 				    continue;             
                 }
@@ -356,7 +356,7 @@ public class EnvironmentFrame extends JFrame {
 	private int myNumber = 0xdeadbeef;
 
 	/** The default title for these frames. */
-	private static final String DEFAULT_TITLE = "JFLAP";
+	private static final String DEFAULT_TITLE = "JFLAP-NG";
 
 	/**
 	 * The window listener for this frame.

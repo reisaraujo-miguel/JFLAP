@@ -1,5 +1,5 @@
 /*
- *  JFLAP - Formal Languages and Automata Package
+ *  JFLAP-NG - Formal Languages and Automata Package
  * 
  * 
  *  Susan H. Rodger
@@ -10,7 +10,7 @@
  *  Copyright (c) 2002-2009
  *  All rights reserved.
 
- *  JFLAP is open source software. Please see the LICENSE for terms.
+ *  JFLAP-NG is open source software. Please see the LICENSE for terms.
  *
  */
 

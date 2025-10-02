@@ -1,4 +1,4 @@
-name: JFLAP CI/CD Pipeline
+name: JFLAP-NG CI/CD Pipeline
 
 on:
   push:
@@ -103,7 +103,7 @@ jobs:
         tag_name: ${{ github.ref_name }}
         name: JFLAP ${{ github.ref_name }}
         body: |
-          Automated release for JFLAP ${{ github.ref_name }}
+          Automated release for JFLAP-NG ${{ github.ref_name }}
 
           Built from commit: ${{ github.sha }}
 

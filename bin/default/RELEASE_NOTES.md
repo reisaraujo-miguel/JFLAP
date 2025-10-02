@@ -1,4 +1,4 @@
-# JFLAP 8.0 Release Notes
+# JFLAP-NG 8.0 Release Notes
 
 ## Overview
 JFLAP (Java Formal Languages and Automata Package) version 8.0 is a major release that includes significant improvements to the build system, testing infrastructure, and overall code quality.
