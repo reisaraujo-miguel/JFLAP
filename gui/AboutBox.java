@@ -59,14 +59,14 @@ public class AboutBox extends JWindow {
 		// Add the image display component with scaled image
 		if (IMAGE != null) {
 			ImageDisplayComponent imageComponent = new ImageDisplayComponent(IMAGE);
-			// Scale the image to make the window even smaller
-			Image scaledImage = IMAGE.getScaledInstance(324, 97, Image.SCALE_SMOOTH);
+			// Scale the image to make the window larger
+			Image scaledImage = IMAGE.getScaledInstance(450, 135, Image.SCALE_SMOOTH);
 			imageComponent.setImage(scaledImage);
 			panel.add(imageComponent, BorderLayout.CENTER);
 		} else {
 			// Fallback: display text if image can't be loaded
 			JLabel textLabel = new JLabel("JFLAP - Formal Languages and Automata Package", JLabel.CENTER);
-			textLabel.setFont(new Font("SansSerif", Font.BOLD, 12));
+			textLabel.setFont(new Font("SansSerif", Font.BOLD, 14));
 			textLabel.setForeground(Color.BLACK);
 			panel.add(textLabel, BorderLayout.CENTER);
 		}
@@ -78,12 +78,12 @@ public class AboutBox extends JWindow {
 		// Add version information
 		JLabel versionLabel = new JLabel("JFLAP Version " + VERSION, JLabel.CENTER);
 		versionLabel.setForeground(Color.BLACK);
-		versionLabel.setFont(new Font("SansSerif", Font.BOLD, 9));
+		versionLabel.setFont(new Font("SansSerif", Font.BOLD, 11));
 		bottomPanel.add(versionLabel, BorderLayout.CENTER);
 
 		// Add close button
 		JButton closeButton = new JButton("Close");
-		closeButton.setFont(new Font("SansSerif", Font.PLAIN, 8));
+		closeButton.setFont(new Font("SansSerif", Font.PLAIN, 10));
 		closeButton.addActionListener(e -> setVisible(false));
 		bottomPanel.add(closeButton, BorderLayout.EAST);
 
