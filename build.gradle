@@ -44,7 +44,8 @@ sourceSets {
             srcDirs = sourceDirs
         }
         resources {
-            srcDirs = ['ICON', 'MEDIA', 'DOCS', 'META-INF']
+            srcDirs = ['.']
+            includes = ['ICON/**', 'MEDIA/**', 'DOCS/**', 'META-INF/**']
         }
     }
 }
