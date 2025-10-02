@@ -70,15 +70,6 @@ nbproject/
 *.tar.gz
 *.zip
 
-# Documentation
-DOCS/
-
-# Media files
-MEDIA/
-
-# Icon files
-ICON/
-
 # Batik library (external dependency)
 lib/batik-1.17/
 
