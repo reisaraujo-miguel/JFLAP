@@ -17,10 +17,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Set up JDK 21
+    - name: Set up JDK 25
       uses: actions/setup-java@v4
       with:
-        java-version: '21'
+        java-version: '25'
         distribution: 'temurin'
         cache: 'gradle'
 
@@ -48,10 +48,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Set up JDK 21
+    - name: Set up JDK 25
       uses: actions/setup-java@v4
       with:
-        java-version: '21'
+        java-version: '25'
         distribution: 'temurin'
         cache: 'gradle'
 
@@ -109,7 +109,7 @@ jobs:
 
           ## Features
           - Formal Languages and Automata Package
-          - Java 21 compatible
+          - Java 25 compatible
           - Modern build system with Gradle
         draft: false
         prerelease: false
