@@ -158,7 +158,7 @@ public class AboutBox extends JWindow {
 	private static Image IMAGE = null;
 
 	/** The version string. */
-	public static final String VERSION = "7.1";
+	    public static final String VERSION = "8.0";
 
 	/**
 	 * Some simple test code for the about box.

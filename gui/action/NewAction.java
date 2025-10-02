@@ -120,7 +120,7 @@ public class NewAction extends RestrictedAction {
 		 */
 		public NewDialog() {
 			// super((java.awt.Frame)null, "New Document");
-			super("JFLAP 7.1");
+					super("JFLAP 8.0");
 			getContentPane().setLayout(new GridLayout(0, 1));
 			initMenu();
 			initComponents();
