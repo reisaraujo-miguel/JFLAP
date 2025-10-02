@@ -143,7 +143,7 @@ public abstract class PumpingLemma implements Serializable
      */
     protected static String pumpString(String s, int i)
     {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         for(int n = i; n > 0; n--)
             sb.append(s);
         return sb.toString();

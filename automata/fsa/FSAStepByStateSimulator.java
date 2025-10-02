@@ -25,7 +25,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-import debug.EDebug;
+// import debug.EDebug;
 
 import automata.Automaton;
 import automata.AutomatonSimulator;
@@ -94,7 +94,7 @@ public class FSAStepByStateSimulator extends AutomatonSimulator {
 			if (transLabel.contains("[")){
 				for(int i=transLabel.charAt(transLabel.indexOf("[")+1); i<=transLabel.charAt(transLabel.indexOf("[")+3); i++){
 					trange.add(Character.toString((char)i));
-					EDebug.print(Character.toString((char)i));
+					// EDebug.print(Character.toString((char)i));
 				}
 				for(String element : trange){
 					if (unprocessedInput.startsWith(element)) {

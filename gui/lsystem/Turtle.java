@@ -495,7 +495,7 @@ class Turtle implements Cloneable, Serializable {
 	 * @return a string representation of this turtle
 	 */
 	public final String toString() {
-		StringBuffer sb = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 		sb.append("{ " + super.toString());
 		sb.append(", distance=" + distance);
 		sb.append(", position=(" + position.getX() + "," + position.getY()

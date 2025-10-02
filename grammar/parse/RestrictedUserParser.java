@@ -50,7 +50,7 @@ public class RestrictedUserParser extends UserParser{
 		int targetSearched = 0;
 		boolean startBookend = false, endBookend = false;
 		ArrayList<String> discrete = new ArrayList<>();
-		StringBuffer sb = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 		int start = -1;
 
 		/*

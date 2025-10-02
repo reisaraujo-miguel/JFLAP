@@ -44,7 +44,7 @@ import file.DataException;
 import automata.turing.TMState;
 import automata.turing.TuringMachine;
 import automata.turing.TuringMachineBuildingBlocks;
-import debug.EDebug;
+// import debug.EDebug;
 
 import java.awt.Point;
 
@@ -184,7 +184,7 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
                             .getElementsByTagName(fileName).item(0);
                     Automaton temp = (TuringMachine) readAutomaton(tempNode, document);
                     //MERLIN MERLIN MERLIN MERLIN MERLIN//
-//                    EDebug.print("Are we or not creating a block?");
+//                    // EDebug.print("Are we or not creating a block?");
                     state = ((TuringMachine) automaton).createInnerTM(p, temp, fileName,
                             id.intValue());
                 }
@@ -238,7 +238,9 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
 							- ((Integer) o2).intValue();
 				if (o2 instanceof Integer)
 					return 1;
-				return ((Comparable<Object>) o1).compareTo(o2);
+				@SuppressWarnings("unchecked")
+				Comparable<Object> comparable = (Comparable<Object>) o1;
+				return comparable.compareTo(o2);
 			}
 		});
 		createState(blockNodes, i2sn, automaton, locatedStates, i2s, true,

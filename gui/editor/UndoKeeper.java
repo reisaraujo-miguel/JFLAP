@@ -27,7 +27,7 @@ import java.util.LinkedList;
 
 import automata.Automaton;
 import automata.turing.TuringMachine;
-import debug.EDebug;
+// import debug.EDebug;
 
 /**
  * This class will store the states between actions, that we may undo them.
@@ -68,36 +68,36 @@ public class UndoKeeper {
     }
 	
     public void saveStatus(){
-//        EDebug.print("I have been called upon");
+//        // EDebug.print("I have been called upon");
         if (wait){
         	wait = false;
         	return;
         }
     	
-//        EDebug.print("\nFirst place");
+//        // EDebug.print("\nFirst place");
 //        for (int i = 0; i < myDeck.size(); i++)
-//            EDebug.print(((LinkedList)myDeck).get(i).hashCode());
+//            // EDebug.print(((LinkedList)myDeck).get(i).hashCode());
 
 //        if (myDeck.size() > 0)
-//            EDebug.print("The top of deck hash is " + myDeck.peek().hashCode());
+//            // EDebug.print("The top of deck hash is " + myDeck.peek().hashCode());
 
         myDeck.push((Automaton)myMaster.clone()); //push on head
     	    
-//        EDebug.print("The master that is getting pushed on has hascode = " + myMaster.hashCode());
+//        // EDebug.print("The master that is getting pushed on has hascode = " + myMaster.hashCode());
         System.out.println();
 
-//        EDebug.print("Second place");
+//        // EDebug.print("Second place");
 //        for (int i = 0; i < myDeck.size(); i++)
-//            EDebug.print(((LinkedList)myDeck).get(i).hashCode());
+//            // EDebug.print(((LinkedList)myDeck).get(i).hashCode());
 //
-//        EDebug.print("\n");
+//        // EDebug.print("\n");
         
 
         if (myDeck.size() >= 2)
         {
         	Automaton first = myDeck.pop();
         	Automaton second = myDeck.pop();
-//            EDebug.print("The first is " + first.hashCode() + "While the second is " + second.hashCode());
+//            // EDebug.print("The first is " + first.hashCode() + "While the second is " + second.hashCode());
         	if (first.hashCode() == second.hashCode()){
         	    myDeck.push(first);	
         	}
@@ -108,17 +108,17 @@ public class UndoKeeper {
         	}
         }
 
-//        EDebug.print("Third place");
+//        // EDebug.print("Third place");
 //        for (int i = 0; i < myDeck.size(); i++)
-//            EDebug.print(((LinkedList)myDeck).get(i).hashCode());
-//        EDebug.print(myDeck.size());
+//            // EDebug.print(((LinkedList)myDeck).get(i).hashCode());
+//        // EDebug.print(myDeck.size());
 
         while (myDeck.size() > numUndo) myDeck.removeLast();
     }
 
     /*Undo*/
     public void restoreStatus(){
-//        EDebug.print("I am mucking with that data structure.");
+//        // EDebug.print("I am mucking with that data structure.");
     	if (myDeck.size() == 0) return;
     	
     	Automaton p = null;
@@ -126,8 +126,8 @@ public class UndoKeeper {
         
         
         
-//        EDebug.print("Master's hash is " + myMaster.hashCode());
-//        EDebug.print("Top hash is " + p.hashCode());
+//        // EDebug.print("Master's hash is " + myMaster.hashCode());
+//        // EDebug.print("Top hash is " + p.hashCode());
         
         if (myDeck.size() == 0 && p.hashCode() == myMaster.hashCode()) return;
         	
@@ -146,9 +146,9 @@ public class UndoKeeper {
     }
 
     public void redo(){
-//        EDebug.print("I am mucking with that data structure.");
+//        // EDebug.print("I am mucking with that data structure.");
         if (myBackDeck.size() == 0) return;
-//        EDebug.print("Back deck is not empty.");
+//        // EDebug.print("Back deck is not empty.");
 //
         myDeck.push((Automaton)myMaster.clone()); //push on head
 

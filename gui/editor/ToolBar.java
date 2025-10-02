@@ -22,7 +22,7 @@ package gui.editor;
 
 import javax.swing.*;
 
-import debug.EDebug;
+// import debug.EDebug;
 
 import java.awt.Component;
 import java.awt.Cursor;
@@ -127,13 +127,18 @@ public class ToolBar extends JToolBar implements ActionListener {
 			view.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
 		}
 		if(tool instanceof DeleteTool){
-			   Toolkit toolkit = Toolkit.getDefaultToolkit();  
-			   //Image image = toolkit.getImage("/JFLAP09CVS/ICON/deletecursor.gif");   
-			   URL url = getClass().getResource("/ICON/deletecursor.gif");
-			   Image image = getToolkit().getImage(url);
-			   Point hotSpot = new Point(5,5);  
-			   Cursor cursor = toolkit.createCustomCursor(image, hotSpot, "Delete");  
-			   view.setCursor(cursor);
+			   Toolkit toolkit = Toolkit.getDefaultToolkit();
+			   URL url = gui.ResourceLoader.getResource("ICON/deletecursor.gif");
+			   if (url != null) {
+				   Image image = toolkit.getImage(url);
+				   Point hotSpot = new Point(5,5);
+				   Cursor cursor = toolkit.createCustomCursor(image, hotSpot, "Delete");
+				   view.setCursor(cursor);
+			   } else {
+				   // Fallback to default cursor if icon not found
+				   System.err.println("Warning: Could not load cursor icon: ICON/deletecursor.gif");
+				   view.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+			   }
 			   //Cursor hourglassCursor = new Cursor(Cursor.CROSSHAIR_CURSOR);
 			   //view.setCursor(hourglassCursor);
 		}

@@ -32,7 +32,7 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.JOptionPane;
 
-import debug.EDebug;
+// import debug.EDebug;
 
 /**
  * Action for testing grammar to see what type of grammar it is.
@@ -70,7 +70,7 @@ public class GrammarTypeTestAction extends GrammarAction {
 	 */
 	public void actionPerformed(ActionEvent e) {
 		Grammar g=environment.getGrammar(UnrestrictedGrammar.class);
-//        EDebug.print(g == null);
+//        // EDebug.print(g == null);
         if (g == null) return;
 
 		Production[] p=g.getProductions();

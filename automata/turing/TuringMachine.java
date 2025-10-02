@@ -308,7 +308,7 @@ public class TuringMachine extends Automaton {
             ((Note)dest.getNotes().get(k)).initializeForView(curNote.getView());
 		}
         dest.setEnvironmentFrame(src.getEnvironmentFrame());
-//		EDebug.print("finished");
+//		// EDebug.print("finished");
     }
 
     public Map<String, TuringMachine> getBlockMap(){

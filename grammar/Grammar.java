@@ -347,7 +347,7 @@ public abstract class Grammar implements Serializable, Cloneable {
 	 * @return a string representation of the grammar object.
 	 */
 	public String toString() {
-		StringBuffer buffer = new StringBuffer();
+		StringBuilder buffer = new StringBuilder();
 		buffer.append(super.toString());
 		buffer.append('\n');
 		/** print variables. */

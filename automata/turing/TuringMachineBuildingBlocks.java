@@ -318,7 +318,7 @@ public class TuringMachineBuildingBlocks extends TuringMachine {
             ((Note)dest.getNotes().get(k)).initializeForView(curNote.getView());
 		}
         dest.setEnvironmentFrame(src.getEnvironmentFrame());
-//		EDebug.print("finished");
+//		// EDebug.print("finished");
     }
 
 	public Map<String, TuringMachineBuildingBlocks> getTMBBBlockMap(){

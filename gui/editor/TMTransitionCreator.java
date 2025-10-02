@@ -42,7 +42,7 @@ import automata.Transition;
 import automata.turing.TMTransition;
 import automata.turing.TuringMachine;
 import automata.turing.TuringMachineBuildingBlocks;
-import debug.EDebug;
+// import debug.EDebug;
 
 /**
  * This is the creator of transitions in turing machines.
@@ -251,7 +251,7 @@ public class TMTransitionCreator extends TableTransitionCreator {
         if (allowStay)
             DIRS = new String[] { "R", "S", "L" }; //made this non-static to allow for switching option
         else{
-//            EDebug.print("Reduction");
+//            // EDebug.print("Reduction");
             DIRS = new String[] { "R", "L" }; //made this non-static to allow for switching option
         }
 

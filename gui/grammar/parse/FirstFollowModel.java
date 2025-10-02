@@ -197,7 +197,7 @@ public class FirstFollowModel extends AbstractTableModel {
 	 */
 	private String removeDuplicateCharacters(String s) {
 		Set<Character> characters = new HashSet<>();
-		StringBuffer sb = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < s.length(); i++) {
 			Character c = Character.valueOf(s.charAt(i));
 			if (characters.add(c))
@@ -241,7 +241,7 @@ public class FirstFollowModel extends AbstractTableModel {
 	 *            the column index of the cell to set the set for
 	 */
 	public void setSet(Set<String> set, int row, int column) {
-		StringBuffer sb = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 		Iterator<String> it = set.iterator();
 		while (it.hasNext()) {
 			String element = (String) it.next();

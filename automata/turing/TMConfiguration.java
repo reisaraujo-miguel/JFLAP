@@ -68,7 +68,7 @@ public class TMConfiguration extends Configuration implements Cloneable {
 	 * @return a string representation of this object.
 	 */
 	public String toString() {
-		StringBuffer sb = new StringBuffer(super.toString());
+		StringBuilder sb = new StringBuilder(super.toString());
 		for (int i = 0; i < myTapes.length; i++) {
 			sb.append(" TAPE ");
 			sb.append(i);

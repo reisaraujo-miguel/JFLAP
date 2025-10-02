@@ -87,8 +87,19 @@ public class BuildingBlockTool extends Tool {
 	 * @return the transition tool icon
 	 */
 	protected Icon getIcon() {
-		java.net.URL url = getClass().getResource("/ICON/blocks.gif");
-		return new javax.swing.ImageIcon(url);
+		java.net.URL url = Tool.class.getResource("/ICON/blocks.gif");
+		if (url != null) {
+			return new javax.swing.ImageIcon(url);
+		} else {
+			// Fallback: try system class loader
+			url = ClassLoader.getSystemResource("ICON/blocks.gif");
+			if (url != null) {
+				return new javax.swing.ImageIcon(url);
+			} else {
+				System.err.println("Warning: Could not load icon: ICON/blocks.gif");
+				return null;
+			}
+		}
 	}
 
 	/**

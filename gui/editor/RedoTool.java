@@ -29,7 +29,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.Icon;
 import javax.swing.KeyStroke;
 
-import debug.EDebug;
+// import debug.EDebug;
 
 /**
  * Redo time.
@@ -60,8 +60,19 @@ public class RedoTool extends Tool {
 	 * @return the delete tool icon
 	 */
 	protected Icon getIcon() {
-		java.net.URL url = getClass().getResource("/ICON/redo.jpg");
-		return new javax.swing.ImageIcon(url);
+		java.net.URL url = Tool.class.getResource("/ICON/redo.jpg");
+		if (url != null) {
+			return new javax.swing.ImageIcon(url);
+		} else {
+			// Fallback: try system class loader
+			url = ClassLoader.getSystemResource("ICON/redo.jpg");
+			if (url != null) {
+				return new javax.swing.ImageIcon(url);
+			} else {
+				System.err.println("Warning: Could not load icon: ICON/redo.jpg");
+				return null;
+			}
+		}
 	}
 
 	/**

@@ -36,7 +36,7 @@ import automata.State;
 import automata.Transition;
 import gui.environment.Universe;
 
-import debug.EDebug;
+// import debug.EDebug;
 
 import javax.swing.JOptionPane;
 
@@ -210,7 +210,7 @@ public class TMSimulator extends AutomatonSimulator {
      * @return List containing the single configuration, or null if there are no valid transitions.
      */
     public List<Configuration> stepBlock(TMConfiguration config){
-        EDebug.print("Inside StepBlock");
+        // EDebug.print("Inside StepBlock");
            while (((TuringMachine)(config = (TMConfiguration) stepConfiguration(config).get(0)).getCurrentState().getAutomaton()).getParent() != null);
            return Arrays.asList(config);
     }
@@ -238,7 +238,7 @@ public class TMSimulator extends AutomatonSimulator {
         
         int times = 0;
         while ((tmp = currentState.getInnerTM()).getStates().length != 0){
-            EDebug.print(times++);
+            // EDebug.print(times++);
             currentState = (TMState) tmp.getInitialState();
 
             //check that the initial state exists

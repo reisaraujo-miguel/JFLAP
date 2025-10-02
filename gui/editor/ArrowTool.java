@@ -66,7 +66,7 @@ import automata.turing.TMTransition;
 import automata.turing.TMState;
 import automata.turing.TuringMachine;
 import automata.turing.TuringMachineBuildingBlocks;
-import debug.EDebug;
+// import debug.EDebug;
 
 /**
  * The arrow tool is used mostly for editing existing objects.
@@ -116,12 +116,23 @@ public class ArrowTool extends Tool {
 
 	/**
 	 * Returns the tool icon.
-	 * 
+	 *
 	 * @return the arrow tool icon
 	 */
 	protected Icon getIcon() {
-		java.net.URL url = getClass().getResource("/ICON/arrow.gif");
-		return new javax.swing.ImageIcon(url);
+		java.net.URL url = Tool.class.getResource("/ICON/arrow.gif");
+		if (url != null) {
+			return new javax.swing.ImageIcon(url);
+		} else {
+			// Fallback: try system class loader
+			url = ClassLoader.getSystemResource("ICON/arrow.gif");
+			if (url != null) {
+				return new javax.swing.ImageIcon(url);
+			} else {
+				System.err.println("Warning: Could not load icon: ICON/arrow.gif");
+				return null;
+			}
+		}
 	}
 
 	/**
@@ -156,7 +167,7 @@ public class ArrowTool extends Tool {
 			getView().repaint();
 			return;
 		}
-        EDebug.print("Beginning to Edit with creator "+ creator.getClass());
+        // EDebug.print("Beginning to Edit with creator "+ creator.getClass());
 		creator.editTransition(trans, event.getPoint());
 
 	}
@@ -189,7 +200,7 @@ public class ArrowTool extends Tool {
 		if (getDrawer().getAutomaton().getEnvironmentFrame() !=null) {
     			((AutomatonEnvironment)getDrawer().getAutomaton().getEnvironmentFrame().getEnvironment()).saveStatus();
 		} else {
-            EDebug.print("I cannot preserve what you ask");
+            // EDebug.print("I cannot preserve what you ask");
 		}
 		initialPointClick.setLocation(event.getPoint());
 		lastClickedState = getDrawer().stateAtPoint(event.getPoint());
@@ -364,7 +375,7 @@ public class ArrowTool extends Tool {
 			}
 			initialPointClick.setLocation(p);
 			getView().repaint();
-			//EDebug.print(getView().getDrawer().selfTransitionMap);
+			//// EDebug.print(getView().getDrawer().selfTransitionMap);
 		}
 		else{
 			Rectangle bounds;

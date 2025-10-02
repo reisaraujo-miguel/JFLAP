@@ -50,7 +50,7 @@ public class Tape implements Serializable {
 	 *            the input string to write to the tape
 	 */
 	public Tape(String input) {
-		buffer = new StringBuffer();
+		buffer = new StringBuilder();
 		if (input.equals(""))
 			input = "" + BLANK;
 		buffer.insert(0, input);
@@ -64,7 +64,7 @@ public class Tape implements Serializable {
 	 *            the tape to copy
 	 */
 	public Tape(Tape tape) {
-		this.buffer = new StringBuffer(tape.buffer.toString());
+		this.buffer = new StringBuilder(tape.buffer.toString());
 		tapeHead = tape.getTapeHead();
 		cachedHash = tape.cachedHash;
 	}
@@ -291,7 +291,7 @@ public class Tape implements Serializable {
 	}
 
 	/** The string buffer. */
-	private StringBuffer buffer = new StringBuffer();
+	private StringBuilder buffer = new StringBuilder();
 
 	/** The tape head (index in buffer). */
 	private int tapeHead;

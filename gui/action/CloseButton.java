@@ -23,6 +23,7 @@ package gui.action;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
 
 import javax.swing.ImageIcon;
 import javax.swing.event.ChangeEvent;
@@ -112,9 +113,14 @@ public class CloseButton extends javax.swing.JButton
      * The icon, size, and tooltip are set.
      *
      */
-    public void setDefaults() 
+    public void setDefaults()
     {
-        setIcon(new ImageIcon(getClass().getResource("/ICON/x.gif")));
+        URL url = gui.ResourceLoader.getResource("ICON/x.gif");
+        if (url != null) {
+            setIcon(new ImageIcon(url));
+        } else {
+            System.err.println("Warning: Could not load icon: ICON/x.gif");
+        }
         setPreferredSize(new Dimension(22, 22));
         setToolTipText("Dismiss Tab");
     }

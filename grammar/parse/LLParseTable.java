@@ -355,7 +355,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 	private String spaceSet(Set<?> set) {
 		Iterator<?> it = set.iterator();
 		boolean first = true;
-		StringBuffer sb = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 		while (it.hasNext()) {
 			if (!first)
 				sb.append(" ");

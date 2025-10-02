@@ -25,7 +25,7 @@ import java.util.Iterator;
 
 import javax.swing.JOptionPane;
 
-import debug.EDebug;
+// import debug.EDebug;
 
 import automata.Automaton;
 import automata.AutomatonSimulator;
@@ -59,10 +59,10 @@ public class PDAStepByStateSimulator extends AutomatonSimulator {
 		            possibleValues, possibleValues[0]);
 		if(selectedValue.equals(possibleValues[0])){
 			myAcceptance = FINAL_STATE;
-			//EDebug.print("fstate");
+			//// EDebug.print("fstate");
 		}else if(selectedValue.equals(possibleValues[1])){
 			myAcceptance = EMPTY_STACK;
-			//EDebug.print("estack");
+			//// EDebug.print("estack");
 		}
 		//myAcceptance = FINAL_STATE;
 		//myAcceptance=selectedValue;

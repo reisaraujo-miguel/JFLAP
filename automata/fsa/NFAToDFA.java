@@ -140,7 +140,7 @@ public class NFAToDFA {
 	 * @return a string representation of <CODE>states</CODE>.
 	 */
 	public String getStringForStates(State[] states) {
-		StringBuffer buffer = new StringBuffer();
+		StringBuilder buffer = new StringBuilder();
 		for (int k = 0; k < states.length - 1; k++) {
 			buffer.append(Integer.toString(states[k].getID()));
 			buffer.append(",");

@@ -74,7 +74,18 @@ public class StateCollapseTool extends Tool {
 	 */
 	protected Icon getIcon() {
 		java.net.URL url = getClass().getResource("/ICON/state_collapse.gif");
-		return new ImageIcon(url);
+		if (url != null) {
+			return new ImageIcon(url);
+		} else {
+			// Fallback: try system class loader
+			url = ClassLoader.getSystemResource("ICON/state_collapse.gif");
+			if (url != null) {
+				return new ImageIcon(url);
+			} else {
+				System.err.println("Warning: Could not load icon: ICON/state_collapse.gif");
+				return null;
+			}
+		}
 	}
 
 	/**

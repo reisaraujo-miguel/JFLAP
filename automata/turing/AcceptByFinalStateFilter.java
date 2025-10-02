@@ -26,14 +26,14 @@
 package automata.turing;
 
 import java.util.Arrays;
-import debug.EDebug;
+// import debug.EDebug;
 public class AcceptByFinalStateFilter implements AcceptanceFilter{ //note that building blocks should be STRIPPED of FINAL states //or we could simply ignore final states in nonTopLevel.
     
     public boolean accept(TMConfiguration tmc){
          TMState tms = (TMState) tmc.getCurrentState();
          if (((TuringMachine) tms.getAutomaton()).getParent() != null) return false; //first, we check if this is a top-level state, if it is not, we cannot accept
 
-//         EDebug.print("Hello World");
+//         // EDebug.print("Hello World");
          
          return Arrays.asList(tms.getAutomaton().getFinalStates()).contains(tms);
     } 

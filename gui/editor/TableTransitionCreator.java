@@ -43,7 +43,7 @@ import automata.State;
 import automata.Transition;
 import automata.turing.TMTransition;
 import automata.turing.Tape;
-import debug.EDebug;
+// import debug.EDebug;
 /**
  * This allows the user to create transition creators that have tables directly
  * in the editing window with a minimum of effort.
@@ -263,9 +263,9 @@ public abstract class TableTransitionCreator extends TransitionCreator {
 		editingTable.changeSelection(0, 0, false, false);
 		editingTable.requestFocus();
 		
-//		EDebug.print("Focus has been requested");
-//	    EDebug.print("hasFocus? "+editingTable.hasFocus());	
-//	    EDebug.print(getParent().getClass().getName());
+//		// EDebug.print("Focus has been requested");
+//	    // EDebug.print("hasFocus? "+editingTable.hasFocus());	
+//	    // EDebug.print(getParent().getClass().getName());
 		
 		getParent().repaint();
 	}

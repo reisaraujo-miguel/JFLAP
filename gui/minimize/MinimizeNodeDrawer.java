@@ -82,7 +82,7 @@ public class MinimizeNodeDrawer extends DefaultNodeDrawer {
 		for (int i = 0; i < ids.length; i++)
 			ids[i] = states[i].getID();
 		Arrays.sort(ids);
-		StringBuffer buffer = new StringBuffer();
+		StringBuilder buffer = new StringBuilder();
 		for (int i = 0; i < ids.length; i++) {
 			if (i != 0)
 				buffer.append(", ");

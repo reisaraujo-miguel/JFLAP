@@ -32,7 +32,7 @@ import javax.swing.KeyStroke;
 import automata.State;
 import automata.Transition;
 
-import debug.EDebug;
+// import debug.EDebug;
 /**
  * A tool that handles the deletion of states and transitions.
  * 
@@ -62,8 +62,19 @@ public class DeleteTool extends Tool {
 	 * @return the delete tool icon
 	 */
 	protected Icon getIcon() {
-		java.net.URL url = getClass().getResource("/ICON/delete.gif");
-		return new javax.swing.ImageIcon(url);
+		java.net.URL url = Tool.class.getResource("/ICON/delete.gif");
+		if (url != null) {
+			return new javax.swing.ImageIcon(url);
+		} else {
+			// Fallback: try system class loader
+			url = ClassLoader.getSystemResource("ICON/delete.gif");
+			if (url != null) {
+				return new javax.swing.ImageIcon(url);
+			} else {
+				System.err.println("Warning: Could not load icon: ICON/delete.gif");
+				return null;
+			}
+		}
 	}
 
 	/**

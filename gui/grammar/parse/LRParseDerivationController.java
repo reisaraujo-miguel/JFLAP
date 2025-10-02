@@ -512,7 +512,7 @@ public class LRParseDerivationController extends LLParseDerivationController {
 	 */
 	private void assignItemsToState(Production[] items, State state) {
 		Set<Production> itemSet = new HashSet<>();
-		StringBuffer sb = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < items.length; i++) {
 			itemSet.add(items[i]);
 			if (i != 0)

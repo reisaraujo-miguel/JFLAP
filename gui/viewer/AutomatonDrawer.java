@@ -35,7 +35,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
 
-import debug.EDebug;
+// import debug.EDebug;
 
 import automata.Automaton;
 import automata.Note;
@@ -349,7 +349,7 @@ public class AutomatonDrawer {
 			Point to = pointOnState(states[i], -Math.PI * 0.667);
 			for (int n = 0; n < trans.length; n++) {
 				if(selfTransitionMap.containsKey(trans[n])){
-					//EDebug.print(selfTransitionMap);
+					//// EDebug.print(selfTransitionMap);
 					Point storedfrom = pointOnState(states[i], (selfTransitionMap.get(trans[n])+Math.PI*.166));
 					Point storedto = pointOnState(states[i], (selfTransitionMap.get(trans[n])-Math.PI*.166));
 					CurvedArrow arrow = n == 0 ? new CurvedArrow(storedfrom, storedto, -2.0f, trans[n])
@@ -360,7 +360,7 @@ public class AutomatonDrawer {
 					arrowToTransitionMap.put(arrow, trans[n]);
 					transitionToArrowMap.put(trans[n], arrow);
 				}else{
-					//EDebug.print(selfTransitionMap);
+					//// EDebug.print(selfTransitionMap);
 					selfTransitionMap.put(trans[n], -Math.PI*.5);
 					CurvedArrow arrow = n == 0 ? new CurvedArrow(from, to, -2.0f, trans[n])
 						: new InvisibleCurvedArrow(from, to, -2.0f - n, trans[n]);

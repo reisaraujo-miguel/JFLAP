@@ -48,7 +48,7 @@ import automata.fsa.NFAToDFA;
 import automata.graph.Graph;
 import automata.graph.LayoutAlgorithm;
 import automata.graph.layout.GEMLayoutAlgorithm;
-import debug.EDebug;
+// import debug.EDebug;
 
 /**
  * This is the class that controls the conversion of an NFA to a DFA.
@@ -136,14 +136,14 @@ public class ConversionController {
 		Set<State> set = new HashSet<>(Arrays.asList(getStatesForString(
 				state.getLabel(), nfa)));
 		State inMap = (State) setToState.get(set);
-        EDebug.print(set);
-        EDebug.print(inMap);
-        EDebug.print(state);
+        // EDebug.print(set);
+        // EDebug.print(inMap);
+        // EDebug.print(state);
 
-//        EDebug.print(setToState.size());
-//        EDebug.print(state.getLabel());
+//        // EDebug.print(setToState.size());
+//        // EDebug.print(state.getLabel());
         for (Object o: setToState.keySet())  
-        	EDebug.print(o.toString());
+        	// EDebug.print(o.toString());
         
 		if (inMap != null && inMap != state)
 			throw new IllegalArgumentException("This set is in the DFA!");

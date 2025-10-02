@@ -32,7 +32,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
-import debug.EDebug;
+// import debug.EDebug;
 
 import javax.swing.JTextArea;
 
@@ -207,7 +207,7 @@ public class Note extends JTextArea{
 	}
 	
 	public int specialHash(){
-//        EDebug.print(myAutoPoint.hashCode() + getText().hashCode());
+//        // EDebug.print(myAutoPoint.hashCode() + getText().hashCode());
         return myAutoPoint == null? -1 : myAutoPoint.hashCode() + this.getText().hashCode();
 	}
 

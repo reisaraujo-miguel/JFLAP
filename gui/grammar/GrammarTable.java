@@ -33,7 +33,7 @@ import java.awt.Font;
 
 import javax.swing.*;
 import javax.swing.table.*;
-import debug.EDebug;
+// import debug.EDebug;
 
 /**
  * The <CODE>GrammarTable</CODE> is a simple extension to the <CODE>JTable</CODE>
@@ -134,7 +134,7 @@ public class GrammarTable extends HighlightTable {
 		try {
 			grammar = (Grammar) grammarClass.getDeclaredConstructor().newInstance();
 		} catch (NullPointerException e) {
-            EDebug.print("Throwing a Null Pointer Back at YOU.");
+            // EDebug.print("Throwing a Null Pointer Back at YOU.");
 			throw e;
 		} catch (Throwable e) {
 			throw new IllegalArgumentException("Bad grammar class "

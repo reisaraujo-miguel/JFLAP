@@ -34,7 +34,7 @@ import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-import debug.EDebug;
+// // import debug.EDebug;
 
 //import sun.security.util.Debug;
 
@@ -449,7 +449,7 @@ public abstract class Environment extends JPanel {
 	 * Sets the dirty bit. This should be called if the object is changed.
 	 */
 	public void setDirty() {
-//		EDebug.print("Change has come");
+//		// EDebug.print("Change has come");
 		dirty = true;
 	}
 

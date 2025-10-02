@@ -55,7 +55,7 @@ public class LSystemTransducer extends AbstractTransducer {
 		Iterator<String> it = list.iterator();
 		if (!it.hasNext())
 			return "";
-		StringBuffer sb = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 		sb.append(it.next());
 		while (it.hasNext()) {
 			sb.append(' ');

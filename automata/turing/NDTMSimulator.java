@@ -207,7 +207,7 @@ public class NDTMSimulator extends AutomatonSimulator {
     private AcceptanceFilter[] myFilters;
 
     public List<TMConfiguration> stepBlock(TMConfiguration config){
-    	//EDebug.print("Inside StepBlock");
+    	//// EDebug.print("Inside StepBlock");
     	while (((TuringMachine)(config = (TMConfiguration) stepConfiguration(config).get(0)).getCurrentState().getAutomaton()).getParent() != null);
     	return Arrays.asList(config);
     }

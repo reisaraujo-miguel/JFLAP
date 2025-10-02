@@ -100,7 +100,7 @@ public abstract class Tool extends SuperMouseAdapter {
 	 * @return the default tool icon
 	 */
 	protected Icon getIcon() {
-		java.net.URL url = getClass().getResource("/ICON/default.gif");
+		java.net.URL url = getClass().getResource("ICON/default.gif");
 		return new javax.swing.ImageIcon(url);
 	}
 

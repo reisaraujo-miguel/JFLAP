@@ -37,7 +37,7 @@ interface TuringConstants {
 	static class FixCreator {
 		public static String getFix() {
 			char c = automata.turing.Tape.BLANK;
-			StringBuffer b = new StringBuffer();
+			StringBuilder b = new StringBuilder();
 			for (int i = 0; i < 20; i++)
 				b.append(c);
 			return b.toString();

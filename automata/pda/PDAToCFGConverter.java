@@ -370,7 +370,7 @@ public class PDAToCFGConverter {
 		String lhs = (String) MAP.get(production.getLHS());
 		String rhs = production.getRHS();
 		int leftIndex, rightIndex; // Position of left and right parentheses.
-		StringBuffer newRhs = new StringBuffer();
+		StringBuilder newRhs = new StringBuilder();
 		while ((leftIndex = rhs.indexOf('(')) != -1
 				&& (rightIndex = rhs.indexOf(')')) != -1) {
 			newRhs.append(rhs.substring(0, leftIndex));

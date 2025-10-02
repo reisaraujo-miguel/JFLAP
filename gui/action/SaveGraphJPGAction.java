@@ -48,7 +48,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JComponent;
 import javax.swing.filechooser.FileFilter;
 
-import debug.EDebug;
+// import debug.EDebug;
 
 /**
  * The <CODE>SaveGraphJPGAction</CODE> is an action to save the graph in window

@@ -307,7 +307,7 @@ public class LRParseTable extends AbstractTableModel implements Serializable,
 		}
 
 		String[] values = parseValues((String) value, column);
-		StringBuffer sb = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < values.length; i++) {
 			if (i != 0)
 				sb.append(' ');
@@ -412,7 +412,7 @@ public class LRParseTable extends AbstractTableModel implements Serializable,
 	 */
 	public String getContentDescription(int row, int column) {
 		StringTokenizer st = new StringTokenizer(entries[row][column]);
-		StringBuffer description = new StringBuffer();
+		StringBuilder description = new StringBuilder();
 		int n = 0;
 		while (st.hasMoreTokens()) {
 			String token = st.nextToken();

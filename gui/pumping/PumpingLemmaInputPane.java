@@ -587,7 +587,7 @@ public abstract class PumpingLemmaInputPane extends JPanel
             return s;
         
         int count = 1;
-        StringBuffer ret = new StringBuffer();
+        StringBuilder ret = new StringBuilder();
         for(int i = 0; i < s.length(); i++)
         {
             for(int j = i + 1; j < s.length(); j++)

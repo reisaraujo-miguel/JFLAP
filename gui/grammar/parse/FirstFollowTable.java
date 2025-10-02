@@ -76,7 +76,7 @@ public class FirstFollowTable extends LeftTable {
 	private static String getSetString(String s) {
 		if (s == null)
 			return "{ }";
-		StringBuffer sb = new StringBuffer("{ ");
+		StringBuilder sb = new StringBuilder("{ ");
 		for (int i = 0; i < s.length(); i++) {
 			char c = s.charAt(i);
 			if (c == '!')

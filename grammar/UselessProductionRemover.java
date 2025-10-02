@@ -488,7 +488,7 @@ public class UselessProductionRemover {
 		for (int k = 0; k < rhs.length(); k++) {
 			char ch = rhs.charAt(k);
 			if (ProductionChecker.isVariable(ch)) {
-				StringBuffer buffer = new StringBuffer();
+				StringBuilder buffer = new StringBuilder();
 				buffer.append(ch);
 				list.add(getTransition(v1, buffer.toString(), graph));
 			}

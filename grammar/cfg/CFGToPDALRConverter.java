@@ -61,7 +61,7 @@ public class CFGToPDALRConverter extends GrammarToAutomatonConverter {
 	 * @return the reverse of <CODE>string</CODE>
 	 */
 	private String getReverse(String string) {
-		StringBuffer buffer = new StringBuffer();
+		StringBuilder buffer = new StringBuilder();
 		for (int k = string.length() - 1; k >= 0; k--) {
 			buffer.append(string.charAt(k));
 		}

@@ -25,7 +25,7 @@ import gui.viewer.AutomatonPane;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.TableModel;
 
-import debug.EDebug;
+// import debug.EDebug;
 
 import automata.State;
 import automata.Transition;
@@ -107,7 +107,7 @@ public class FSATransitionCreator extends TableTransitionCreator {
 	 * Modifies a transition according to what's in the table.
 	 */
 	public Transition modifyTransition(Transition t, TableModel model) {
-		//EDebug.print("ModifyTransitionCalled");
+		//// EDebug.print("ModifyTransitionCalled");
 		String s = (String) model.getValueAt(0, 0);
 		try {
 			return new FSATransition(t.getFromState(), t.getToState(), s);

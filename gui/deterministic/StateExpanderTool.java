@@ -63,8 +63,19 @@ public class StateExpanderTool extends Tool {
 	 * @return the state tool icon
 	 */
 	protected Icon getIcon() {
-		java.net.URL url = getClass().getResource("/ICON/state_expander.gif");
-		return new ImageIcon(url);
+		java.net.URL url = Tool.class.getResource("/ICON/state_expander.gif");
+		if (url != null) {
+			return new ImageIcon(url);
+		} else {
+			// Fallback: try system class loader
+			url = ClassLoader.getSystemResource("ICON/state_expander.gif");
+			if (url != null) {
+				return new ImageIcon(url);
+			} else {
+				System.err.println("Warning: Could not load icon: ICON/state_expander.gif");
+				return null;
+			}
+		}
 	}
 
 	/**

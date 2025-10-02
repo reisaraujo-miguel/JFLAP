@@ -364,7 +364,7 @@ public class Operations {
 	 * @return an array of productions, each indicating an item
 	 */
 	public static Production[] getItems(Production production) {
-		StringBuffer sb = new StringBuffer(production.getRHS());
+		StringBuilder sb = new StringBuilder(production.getRHS());
 		String rhs = production.getRHS();
 		Production[] items = new Production[rhs.length() + 1];
 		for (int i = 0; i <= rhs.length(); i++) {

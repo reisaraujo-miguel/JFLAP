@@ -536,7 +536,7 @@ public class BatchMultipleSimulateAction extends MultipleSimulateAction {
 				// Print the warning message about rows without
 				// configurations we could display.setValueAt
 				if (nonassociatedRows.size() > 0) {
-					StringBuffer sb = new StringBuffer("Row");
+					StringBuilder sb = new StringBuilder("Row");
 					if (nonassociatedRows.size() > 1)
 						sb.append("s");
 					sb.append(" ");

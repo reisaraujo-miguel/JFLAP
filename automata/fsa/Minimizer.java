@@ -97,7 +97,7 @@ public class Minimizer {
 	public String getString(State[] states) {
 		if (states.length == 0)
 			return "";
-		StringBuffer buffer = new StringBuffer();
+		StringBuilder buffer = new StringBuilder();
 		for (int k = 0; k < states.length - 1; k++) {
 			buffer.append(Integer.toString(states[k].getID()));
 			buffer.append(",");

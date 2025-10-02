@@ -44,7 +44,7 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 
-import debug.EDebug;
+// // import debug.EDebug;
 
 import automata.event.AutomataStateEvent;
 import automata.event.AutomataStateListener;
@@ -685,7 +685,7 @@ public class Automaton implements Serializable, Cloneable {
 	 * Returns a string representation of this <CODE>Automaton</CODE>.
 	 */
 	public String toString() {
-		StringBuffer buffer = new StringBuffer();
+		StringBuilder buffer = new StringBuilder();
 		buffer.append(super.toString());
 		buffer.append('\n');
 		State[] states = getStates();
@@ -914,7 +914,7 @@ public class Automaton implements Serializable, Cloneable {
 	}
 	
 	public int hashCode(){
-//        EDebug.print("The Hash is that is hashed, is truly hashed");
+//        // EDebug.print("The Hash is that is hashed, is truly hashed");
 		int ret = 0;
 		for (Object o: states)
 			ret+= ((State) o).specialHash();
@@ -925,7 +925,7 @@ public class Automaton implements Serializable, Cloneable {
         ret+=finalStates.hashCode(); 
         ret+=initialState == null? 0: (int)(initialState.specialHash()*Math.PI); 
 
-//        EDebug.print(ret);
+//        // EDebug.print(ret);
 		return ret;
 	}
 

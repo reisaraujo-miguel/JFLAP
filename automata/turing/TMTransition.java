@@ -247,7 +247,7 @@ public class TMTransition extends Transition {
 	 *         read/write tape head for each tape
 	 */
 	public String getDescription() {
-		StringBuffer sb = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 		int t = this.tapes();
 		for (int i = 0; i < t; i++) {
 			if (i != 0)

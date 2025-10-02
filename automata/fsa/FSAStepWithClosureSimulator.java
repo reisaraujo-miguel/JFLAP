@@ -23,7 +23,7 @@ package automata.fsa;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-import debug.EDebug;
+// import debug.EDebug;
 
 import automata.Automaton;
 import automata.ClosureTaker;
@@ -92,7 +92,7 @@ public class FSAStepWithClosureSimulator extends FSAStepByStateSimulator {
 			if (transLabel.contains("[")){
 				for(int i=transLabel.charAt(transLabel.indexOf("[")+1); i<=transLabel.charAt(transLabel.indexOf("[")+3); i++){
 					trange.add(Character.toString((char)i));
-					EDebug.print(Character.toString((char)i));
+					// EDebug.print(Character.toString((char)i));
 				}
 				if (transLabel.length() > 0) {
 					for(String element : trange){

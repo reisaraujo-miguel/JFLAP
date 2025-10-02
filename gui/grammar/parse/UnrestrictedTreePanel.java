@@ -72,7 +72,7 @@ public class UnrestrictedTreePanel extends TreePanel {
 	 * Returns the string representation of the tops and bottoms.
 	 */
 	public String getTB() {
-		StringBuffer total = new StringBuffer();
+		StringBuilder total = new StringBuilder();
 		for (int i = 0; i < top.length; i++) {
 			List<List<UnrestrictedTreeNode>> t = new LinkedList<>();
 			List<List<UnrestrictedTreeNode>> b = new LinkedList<>();
@@ -497,7 +497,7 @@ public class UnrestrictedTreePanel extends TreePanel {
 	}
 
 	private String getDerivation(int level, int num) {
-		StringBuffer b = new StringBuffer(solutionParseNodes[level - 1]
+		StringBuilder b = new StringBuilder(solutionParseNodes[level - 1]
 				.getDerivation());
 		int[] subs = solutionParseNodes[level].getSubstitutions();
 		Production[] ps = solutionParseNodes[level].getProductions();

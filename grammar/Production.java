@@ -252,7 +252,7 @@ public class Production implements Serializable {
 	 * @return a string representation of the production object.
 	 */
 	public String toString() {
-		StringBuffer buffer = new StringBuffer();
+		StringBuilder buffer = new StringBuilder();
 		buffer.append(getLHS());
 		// buffer.append("->");
 		buffer.append('\u2192');

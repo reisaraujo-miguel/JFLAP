@@ -48,7 +48,7 @@ public class CharacterStack implements Serializable {
 	 *            the character stack to copy
 	 */
 	public CharacterStack(CharacterStack stack) {
-		this.buffer = new StringBuffer(stack.buffer.toString());
+		this.buffer = new StringBuilder(stack.buffer.toString());
 	}
 
 	/**
@@ -78,7 +78,7 @@ public class CharacterStack implements Serializable {
 	 * Clears the stack.
 	 */
 	public void clear() {
-		buffer = new StringBuffer();
+		buffer = new StringBuilder();
 		cachedHash = 0xdeadbeef;
 	}
 
@@ -164,7 +164,7 @@ public class CharacterStack implements Serializable {
 	}
 
 	/** The string buffer. */
-	private StringBuffer buffer = new StringBuffer();
+	private StringBuilder buffer = new StringBuilder();
 
 	/** The cached hash value. */
 	private int cachedHash = 0xdeadbeef;

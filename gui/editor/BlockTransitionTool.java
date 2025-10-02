@@ -105,8 +105,19 @@ public class BlockTransitionTool extends TransitionTool {
 	 * @return the transition tool icon
 	 */
 	protected Icon getIcon() {
-		java.net.URL url = getClass().getResource("/ICON/blockTransition.gif");
-		return new javax.swing.ImageIcon(url);
+		java.net.URL url = Tool.class.getResource("/ICON/blockTransition.gif");
+		if (url != null) {
+			return new javax.swing.ImageIcon(url);
+		} else {
+			// Fallback: try system class loader
+			url = ClassLoader.getSystemResource("ICON/blockTransition.gif");
+			if (url != null) {
+				return new javax.swing.ImageIcon(url);
+			} else {
+				System.err.println("Warning: Could not load icon: ICON/blockTransition.gif");
+				return null;
+			}
+		}
 	}
 
 }

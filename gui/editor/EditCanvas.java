@@ -27,7 +27,7 @@ import gui.viewer.AutomatonPane;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
-import debug.EDebug;
+// import debug.EDebug;
 
 /**
  * An <CODE>EditCanvas</CODE> is an extension of <CODE>AutomatonPane</CODE>
@@ -89,7 +89,7 @@ public class EditCanvas extends AutomatonPane {
 		if (getCreator().automaton.getEnvironmentFrame() !=null)
 		if (!((AutomatonEnvironment)(getCreator().automaton.getEnvironmentFrame().getEnvironment())).shouldPaint()) 
 			return;
-//		EDebug.print(Thread.currentThread().getName());
+//		// EDebug.print(Thread.currentThread().getName());
 		super.paintComponent(g);
 		toolbar.drawTool(g);
 		Graphics2D g2 = (Graphics2D) g;

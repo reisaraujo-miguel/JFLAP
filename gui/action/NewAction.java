@@ -155,7 +155,6 @@ public class NewAction extends RestrictedAction {
 			}
             menuBar.add(menu);
 			menu = new JMenu("Help");
-			MenuBarCreator.addItem(menu, new NewHelpAction());
 			MenuBarCreator.addItem(menu, new AboutAction());
 			menuBar.add(menu);
             menu = new JMenu("Batch");

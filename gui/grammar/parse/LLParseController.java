@@ -85,7 +85,7 @@ class LLParseController {
 	 */
 	private String stackString() {
 		Object[] o = STACK.toArray();
-		StringBuffer sb = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 		for (int i = o.length - 1; i >= 0; i--)
 			sb.append(o[i]);
 		return sb.toString();
@@ -95,7 +95,7 @@ class LLParseController {
 	 * Returns the current string derivation.
 	 */
 	private String derivationString() {
-		StringBuffer sb = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 		return sb.toString();
 	}
 

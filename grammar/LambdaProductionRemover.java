@@ -485,7 +485,7 @@ public class LambdaProductionRemover {
 			String comb) {
 		ProductionChecker pc = new ProductionChecker();
 		String rhs = production.getRHS();
-		StringBuffer buffer = new StringBuffer();
+		StringBuilder buffer = new StringBuilder();
 		for (int k = 0; k < rhs.length(); k++) {
 			char ch = rhs.charAt(k);
 			if (ProductionChecker.isTerminal(ch)
@@ -511,7 +511,7 @@ public class LambdaProductionRemover {
 	 *         indicated by <CODE>binary</CODE>.
 	 */
 	private String getRepresentation(String binary, String[] variables) {
-		StringBuffer buffer = new StringBuffer();
+		StringBuilder buffer = new StringBuilder();
 		for (int k = 0; k < binary.length(); k++) {
 			char ch = binary.charAt(k);
 			if (ch == ONE_CHAR) {

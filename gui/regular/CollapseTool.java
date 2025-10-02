@@ -75,7 +75,18 @@ public class CollapseTool extends Tool {
 	 */
 	protected Icon getIcon() {
 		java.net.URL url = getClass().getResource("/ICON/collapse.gif");
-		return new ImageIcon(url);
+		if (url != null) {
+			return new ImageIcon(url);
+		} else {
+			// Fallback: try system class loader
+			url = ClassLoader.getSystemResource("ICON/collapse.gif");
+			if (url != null) {
+				return new ImageIcon(url);
+			} else {
+				System.err.println("Warning: Could not load icon: ICON/collapse.gif");
+				return null;
+			}
+		}
 	}
 
 	/**

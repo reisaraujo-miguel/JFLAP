@@ -29,7 +29,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.Icon;
 import javax.swing.KeyStroke;
 
-import debug.EDebug;
+// import debug.EDebug;
 
 /**
  * First, let's make it work, then we'll make the interface so you don't have to click undo and then click randomly.
@@ -60,8 +60,19 @@ public class UndoTool extends Tool {
 	 * @return the delete tool icon
 	 */
 	protected Icon getIcon() {
-		java.net.URL url = getClass().getResource("/ICON/undo2.jpg");
-		return new javax.swing.ImageIcon(url);
+		java.net.URL url = Tool.class.getResource("/ICON/undo2.jpg");
+		if (url != null) {
+			return new javax.swing.ImageIcon(url);
+		} else {
+			// Fallback: try system class loader
+			url = ClassLoader.getSystemResource("ICON/undo2.jpg");
+			if (url != null) {
+				return new javax.swing.ImageIcon(url);
+			} else {
+				System.err.println("Warning: Could not load icon: ICON/undo2.jpg");
+				return null;
+			}
+		}
 	}
 
 	/**

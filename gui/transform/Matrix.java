@@ -265,7 +265,7 @@ public class Matrix implements Cloneable, Serializable {
 	 * @return a string representation of this matrix
 	 */
 	public final String toString() {
-		StringBuffer sb = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 		sb.append('(');
 		for (int i = 0; i < 4; i++) {
 			if (i != 0)
