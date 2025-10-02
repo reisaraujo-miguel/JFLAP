@@ -36,7 +36,7 @@ application {
 // Include all source directories
 def sourceDirs = []
 file('.').listFiles().each { dir ->
-    if (dir.isDirectory() && dir.name != 'build' && dir.name != 'gradle' && dir.name != 'lib' && dir.name != '.git') {
+    if (dir.isDirectory() && dir.name != 'build' && dir.name != 'gradle' && dir.name != 'lib' && dir.name != '.git' && dir.name != 'src') {
         sourceDirs += dir.path
     }
 }
@@ -115,5 +115,12 @@ task fatJar(type: Jar) {
     from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+test {
+    testLogging {
+        events "passed", "skipped", "failed"
+        showStandardStreams = true
+    }
 }
 
