@@ -3,6 +3,8 @@ package gui;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.net.URL;
 
 /**
@@ -19,9 +21,24 @@ public class ResourceLoaderTest {
 
     @Test
     public void testLoadNonExistentResource() {
-        // Test loading a resource that doesn't exist
-        URL url = ResourceLoader.getResource("nonexistent/resource.txt");
-        assertNull("Should return null for non-existent resources", url);
+        // Redirect stderr to capture the warning
+        PrintStream originalErr = System.err;
+        ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+        System.setErr(new PrintStream(errContent));
+
+        try {
+            // Test loading a resource that doesn't exist
+            URL url = ResourceLoader.getResource("nonexistent/resource.txt");
+            assertNull("Should return null for non-existent resources", url);
+
+            // Verify that a warning was logged
+            String errorOutput = errContent.toString();
+            assertTrue("Should log warning for non-existent resource",
+                      errorOutput.contains("Warning: Could not load resource: nonexistent/resource.txt"));
+        } finally {
+            // Restore original stderr
+            System.setErr(originalErr);
+        }
     }
 
     @Test
