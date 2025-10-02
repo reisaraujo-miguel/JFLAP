@@ -68,7 +68,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: jflap-release
-        path: build/libs/JFLAP_Fat-fat.jar
+        path: build/libs/JFLAP-NG_Fat-fat.jar
         retention-days: 30
 
   release:
@@ -101,7 +101,7 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         tag_name: ${{ github.ref_name }}
-        name: JFLAP ${{ github.ref_name }}
+        name: JFLAP-NG ${{ github.ref_name }}
         body: |
           Automated release for JFLAP-NG ${{ github.ref_name }}
 
@@ -114,7 +114,7 @@ jobs:
         draft: false
         prerelease: false
         files: |
-          build/libs/JFLAP_Fat-fat.jar
+          build/libs/JFLAP-NG_Fat-fat.jar
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
