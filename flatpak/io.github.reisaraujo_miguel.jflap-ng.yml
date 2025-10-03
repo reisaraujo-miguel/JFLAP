@@ -12,14 +12,12 @@ finish-args:
   - --share=ipc
   - --socket=wayland
   - --socket=fallback-x11
-  - --socket=pulseaudio
   - --device=dri
   # File system access
   - --filesystem=xdg-documents
   - --filesystem=xdg-download
   - --filesystem=xdg-pictures
   # XDG portals for file dialogs
-  - --talk-name=org.freedesktop.FileManager1
   - --env=PATH=/app/jre/bin:/usr/bin:/app/bin:$PATH
   - --env=JAVA_HOME=/app/jre
 
