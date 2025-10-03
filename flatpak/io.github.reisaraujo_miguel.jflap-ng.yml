@@ -38,27 +38,26 @@ modules:
         JAVA_HOME: /usr/lib/sdk/openjdk25/jvm/openjdk-25
         GRADLE_OPTS: -Dorg.gradle.offline=true
     build-commands:
-      # Install and use the pre-downloaded Gradle distribution
+      # unzip and use the pre downloaded Gradle distribution
       - unzip -q gradle-9.1.0-bin.zip
-      # Use the extracted Gradle directly
       - ./gradle-9.1.0/bin/gradle build fatJar
       # Create the application directory structure
-      - install -Dm0644 build/lib/JFLAP-NG_Fat-fat.jar ${FLATPAK_DEST}/share/jflap-ng.jar
-      - install -Dm0644 jflap-ng ${FLATPAK_DEST}/share/jflap-ng
-      - install -Dm0644 flatpak/${FLATPAK_ID}.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
-      - install -Dm0644 flatpak/${FLATPAK_ID}.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
-      - install -Dm0644 DOCS/images/${FLATPAK_ID}.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
+      - install -Dm0644 build/libs/JFLAP-NG_Fat-fat.jar /app/share/jflap-ng.jar
+      - install -Dm755 jflap-ng /app/bin/jflap-ng
+      - install -Dm0644 flatpak/${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
+      - install -Dm0644 flatpak/${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml
+      - install -Dm0644 DOCS/images/${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
     post-install:
-      - install -Dm0644 LICENSE -t ${FLATPAK_DEST}/share/licenses/${FLATPAK_ID}/jflap-ng
+      - install -Dm0644 LICENSE -t /app/share/licenses/${FLATPAK_ID}/jflap-ng
 
     sources:
       - type: git
         url: https://github.com/reisaraujo-miguel/jflap-ng.git
         tag: v8.0-beta2
-        commit: 18830b794d4aad8296f55ee4b7a56a0ec681b058
+        commit: 7025ad008d207f9e3c84261960477c15ffe89511
 
       - type: script
-        dest: jflap-ng
+        dest-filename: jflap-ng
         commands:
           - java -jar /app/share/jflap-ng.jar
 
