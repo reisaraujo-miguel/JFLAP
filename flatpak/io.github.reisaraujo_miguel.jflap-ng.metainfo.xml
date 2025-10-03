@@ -8,7 +8,7 @@
 	<summary>Formal languages testing</summary>
 
 	<metadata_license>CC0-1.0</metadata_license>
-	<project_license>LicenseRef=https://github.com/reisaraujo-miguel/jflap-ng/blob/main/LICENSE</project_license>
+	<project_license>https://github.com/reisaraujo-miguel/jflap-ng/blob/main/LICENSE</project_license>
 	<url type="homepage">https://github.com/reisaraujo-miguel/jflap-ng</url>
 	<url type="help">https://www.jflap.org/tutorial/</url>
 	<url type="contact">https://github.com/reisaraujo-miguel</url>
