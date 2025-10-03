@@ -89,3 +89,5 @@ coverage/
 package-lock.json
 yarn.lock
 
+# flatpak build repo
+repo/
